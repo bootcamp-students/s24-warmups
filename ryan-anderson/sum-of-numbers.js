@@ -4,10 +4,10 @@ function getSum(a, b)
   s = a;
   } else if (a < b) { 
       for (let i = a; i <= b; i++)  //iterates on each number in the test array
-      s = s + i; //add each number to the stored sum of all previous numbers
+      s += i; //add each number to the stored sum of all previous numbers
     } else if (a > b){
       for (let i = b; i <= a; i++)
-       s = s + i;
+       s += i;
     }
  return s //the test compares the first output to the exptected output, so the sum must be stored and not returned until the very end
 }
