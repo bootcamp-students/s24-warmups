@@ -15,12 +15,12 @@
 
 function generateRange(min, max, step){
     let arrayPosition = 0;
-    let arrayValues = [min];
+    let arrayValues = [min];    //Initializes the array with the first value.
     
     for (let i = min + step; i <= max; i += step) {
-      arrayPosition++;
-      arrayValues[arrayPosition] = i;
-    }
+      arrayPosition++;          //Moves to the next position in the array.
+      arrayValues[arrayPosition] = i;  //Places the stepped value into that position.
+    }                           //Loops while less than or equal to the max.
     
-    return arrayValues;
+    return arrayValues;         //Return the array of values.
   }
