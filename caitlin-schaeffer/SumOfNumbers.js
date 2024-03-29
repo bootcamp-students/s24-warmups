@@ -8,19 +8,21 @@
 // }
 // return sum 
 // This code returned error, so try the if/else stuff
-function getSum(a,b); {
+function getSum(a,b) {
 let sum = 0
 // set the sum to zero, which is normal, but then set the function to produce a first
+// check if a and b are equal
 if (a === b) {
     sum = a;
 }
 else if (a < b) {
-    // set the integer to a
-    for (let i = a; i >= b; i--) {
-        sum += i }
+    // set the integer to a; loop a to b adding integers
+    for (let i = a; i <= b; i++) {
+        sum += i; }
     }
     else {
-        for (let i = b; i >= a; i--) {
+        // now loop the opposite, from b to a adding integers
+        for (let i = b; i <= a; i++) {
             sum += i;
         }
     }
