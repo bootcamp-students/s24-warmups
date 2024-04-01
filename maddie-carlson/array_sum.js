@@ -2,29 +2,19 @@ function arrayPlusArray(arr1, arr2) {
   // arr1 and arr2 are the parameters, both should be arrays
   // function should return a number
   // ex: ([1, 2, 3], [4, 5, 6]), returns 21
-  // function can fail if one array is unexpectedly larger than the other
+  // function can fail if inputs are the wrong type
   
+  let sum = 0;
   
-  let sum = 0
-  let larger_array
-  let smaller_array
-  
-  if (arr1.length < arr2.length) {
-    larger_array = arr2
-    smaller_array = arr1
-  } else {
-    larger_array = arr1
-    smaller_array = arr2
+  // add each array element sequentially
+  for (let i = 0; i < arr1.length; i++) {
+    sum += arr1[i];
   }
   
-  // to solve, sum each array element individually in a loop
-  // each loop, double check to avoid an out of bounds error
-  
-  for (let i = 0; i < larger_array.length; i++) { 
-    if (i < smaller_array.length) {
-      sum = sum + arr1[i] + arr2[i]
-    }
+  for (let i = 0; i < arr2.length; i++) {
+    sum += arr2[i]
   }
   
+  // return sum
   return sum;
 }
