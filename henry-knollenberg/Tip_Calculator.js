@@ -8,24 +8,25 @@
     make rating uppercase*/
 
 
-function calculateTip(amount, rating) {
-    rating = rating.toUpperCase();
-    switch (rating) {
-        case "TERRIBLE":
-          break;
-        case "POOR":
-          return Math.round(amount * 0.05);
-          break;
-        case "GOOD":
-          return Math.round(amount * 0.1);
-          break;
-        case "GREAT": 
-          return Math.round(amount * 0.15);
-          break;
-        case "EXCELLENT":
-          return Math.round(amount * 0.2);
-          break;
-        default: 
-          return "Rating not recognized";
-    }
-  }
+    function calculateTip(amount, rating) {
+        rating = rating.toUpperCase();
+        switch (rating) {
+            case "TERRIBLE":
+              return 0;
+              break;
+            case "POOR":
+              return Math.ceil(amount * 0.05);
+              break;
+            case "GOOD":
+              return Math.ceil(amount * 0.1);
+              break;
+            case "GREAT": 
+              return Math.ceil(amount * 0.15);
+              break;
+            case "EXCELLENT":
+              return Math.ceil(amount * 0.2);
+              break;
+            default: 
+              return "Rating not recognised";
+        }
+      }
