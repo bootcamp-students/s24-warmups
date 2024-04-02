@@ -7,8 +7,30 @@ Ideas: I think a good code could be something that checks if the product
 of n/x and n/y is a decimal. If it's a decimal return false, if it isn't it's true
 */
 
+
+function isDivisible(n, x, y) {
+    let XisWholeNumber = Number.isInteger((n/x))
+    let YisWholeNumber = Number.isInteger((n/y))
+    return (XisWholeNumber &&  YisWholeNumber)
+  }
+  
+  // two &'s mean 'and'; || means 'or'
+
+/*
+Old code: 
+
+function isDivisible(n, x, y) {
+    Number.isInteger() 
+    if (true) {Number.isInteger((n/x), (n/y));}
+    
+    else (false);}
+  }
+
+
+
 function isDivisible(n, x, y) {
     if (true) {(n/x), (n/y) = whole number;}
     
     else (false) {(n/x) = decimal; (n/y) = decimal;}
   }
+*/
