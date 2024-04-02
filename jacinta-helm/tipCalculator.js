@@ -1,18 +1,18 @@
 function calculateTip(amount, rating) {
   //declare rating percantages
-  let tip;
+  let lowerCaseRating = rating.toLowerCase();
   
-  if (rating === "terrible"){
-      tip = 0;
-  } else if (rating === "poor") {
-     tip = Math.ceil(amount *0.05);
-  } else if (rating === "good"){
+  if (lowerCaseRating === "terrible"){
+      return 0;
+  } else if (lowerCaseRating === "poor") {
+     return Math.ceil(amount *0.05);
+  } else if (lowerCaseRating === "good"){
       return Math.ceil(amount * 0.10);
-  } else if (rating === "great"){
+  } else if (lowerCaseRating === "great"){
       return Math.ceil(amount * 0.15);
-  } else if (rating === "Excellent"){
+  } else if (lowerCaseRating === "excellent"){
       return Math.ceil(amount * 0.20);
-  }
+  } else return "Rating not recognised"
   
   }
 //   return calculateTip = (amount * rating);
