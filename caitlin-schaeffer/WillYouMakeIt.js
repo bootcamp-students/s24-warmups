@@ -7,7 +7,7 @@ Function should return true if it is possible and false if not.
 Params: Write a function that tells you if it is possible to get to the pump. 
 Return: true or false
 Ideas: Most likely this should be an if/else? As in, if gas station is 50 miles away then true, else false
-Explain solution: 
+Explain solution: below
 */
 
 /* I want to say: if true (return fuelLeft == distanceToPump/mpg), if false (fuelLeft != distanceToPump/mpg) */
