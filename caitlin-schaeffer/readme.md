@@ -1,1 +1,1 @@
-This is just a test for capabilities. 
+# Warm Up Kata Exercises for bootcamp. 
