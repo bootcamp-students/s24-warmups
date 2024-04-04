@@ -26,3 +26,9 @@ return("Rating not recognised");
 }
   
 }
+
+/* 
+i need to calculate the tip of a given total rounded up based on service.
+ill tie service to the tip percentage and run an if, else based on service, then execute the 
+math to find the tip and return.
+*/
