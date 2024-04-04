@@ -5,3 +5,4 @@ class Kata {
       return volume
     }
   }
+  //multiple x y and z
