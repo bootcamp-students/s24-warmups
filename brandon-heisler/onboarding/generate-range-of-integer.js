@@ -10,7 +10,6 @@ function generateRange(min, max, step) {
 /*
 i need to generate a range of numbers incrementing by a step.
 ill use a for loop for the incrementing and push each result to an array.
-
 */
 
 /* Ember's Feedback:

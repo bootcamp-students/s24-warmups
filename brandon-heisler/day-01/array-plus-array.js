@@ -33,3 +33,7 @@ function arrayPlusArray(arr1, arr2) {
   pos self talk - This is hard, but I got good sleep last night and I can always ask for help :)
   translate - I will copy my lines from explain into my function body and implement them with JS code.
 */
+// Alternative solution
+function arrayPlusArray(arr1, arr2) {
+  return arr1.concat(arr2).reduce((accumulator, currentValue) => accumulator + currentValue, 0)
+}

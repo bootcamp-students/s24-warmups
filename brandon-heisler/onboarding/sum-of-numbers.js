@@ -9,7 +9,6 @@ function getSum(a, b) {
   return sum;
 }
 
-
 /*
 i need to receive 2 numbers in any order and return a sum of all the numbers in between.
 my idea is to use Math.min and Math.max to sort the starting and ending

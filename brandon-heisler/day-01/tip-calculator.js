@@ -26,3 +26,21 @@ math to find the tip and return.
     I made some changes to the formatting of your code to demonstrate how it is written most often -
     in the industry. I would encourage you to format your code in this way.
 */
+// Alternative Solution
+function calculateTip(amount, rating) {
+  const tip = (percent) => Math.ceil(amount * percent);
+  switch (rating.toLowerCase()) {
+    case "terrible":
+      return 0;
+    case "poor":
+      return tip(0.05);
+    case "good":
+      return tip(0.1);
+    case "great":
+      return tip(0.15);
+    case "excellent":
+      return tip(0.2);
+    default:
+      return "Rating not recognised";
+  }
+}
