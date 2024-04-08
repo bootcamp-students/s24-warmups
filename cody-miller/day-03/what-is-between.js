@@ -15,11 +15,12 @@ function between(a, b) {
 //create an [] with i
 //Inclusive of params
 
-/* function between(a, b) {
+ /* function between(a, b) {
   let betwixt = [];
-  for (let i = a, i <= b, i++) {
+   for (let i = a; i <= b; i++) {
     betwixt = [i];
-  }
+   }
+   return betwixt
 } */
 
 //Be able to take two intergers
