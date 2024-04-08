@@ -1,27 +1,23 @@
-function coinCombo(cents) {
-    // all coin values
-    const coinValues = [25, 10, 5, 1];
+var coinCombo = function(cents) {
+    let pennies = 0, nickels = 0, dimes = 0, quarters = 0;
   
-    // array for the output, filled with zeros
-    const coins = Array(coinValues.length).fill(0);
-  
-    let currentCents = cents;
-    
-    // iterate over the coins
-    for(const coin of coinValues){
-      // only do this if there are some coins left
-      while(currentCents >= coin){
-        // find out how many cents are left
-        // and how many times the current coins fit into the current cents
-        const remainder = currentCents % coin;
-        const increaseBy = (currentCents - remainder) / coin;
-        currentCents = currentCents % coin;
-        const index = coinValues.length - 1 - coinValues.indexOf(coin);
-        coins[index] += increaseBy;
-      }
-    } 
-    
-    return coins;
+    while (cents >= 25) {
+      cents -= 25;
+      quarters += 1;
+    };
+    while (cents >= 10) {
+      cents -= 10;
+      dimes += 1;
+    }
+    while (cents >= 5) {
+      cents -= 5;
+      nickels += 1
+    }
+    while (cents > 0) {
+      cents -= 1;
+      pennies += 1;
+    }
+    return [pennies, nickels, dimes, quarters]
   }
   
   //how many 25c
