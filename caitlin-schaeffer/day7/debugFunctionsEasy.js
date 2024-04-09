@@ -17,15 +17,15 @@ function reverse(str) {
 */
 
 function multi(arr) {
-    let sum = 0 
-    return forEach(arr * arr);
-  }
-  function add(arr) {
-    for (let i = 0; i < arr.length; i ++) {
-        sum += arr[i];
-        }
-    return arr + arr;
-  }
-  function reverse(str) {
-    return str.reverse();
-  }
+  return arr * arr;
+
+}
+function add(arr) {
+  return arr + arr;
+
+}
+function reverse(str) {
+  return str.reverse();
+
+}
+
