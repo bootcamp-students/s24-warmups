@@ -25,5 +25,5 @@ function coinCombo (cents) {
   //pennies
   coins[0] = cents //cover the remainder
   
-	return coins;
+  return coins;
 }
