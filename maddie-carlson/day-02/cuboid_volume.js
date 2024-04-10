@@ -3,4 +3,5 @@ function getVolumeOfCuboid(length, width, height) {
   // should return a number, the cuboid's volume
   // function can fail if length, width, or height are not numbers
   // calculate volume by multiplying all three variables
-  return length * width * height
+  return length * width * height;
+}
