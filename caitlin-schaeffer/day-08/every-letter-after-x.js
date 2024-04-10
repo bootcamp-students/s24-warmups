@@ -18,18 +18,36 @@ var makeEveryLetterAfterXCaps = function (str, letter) {
 
 
 }
+
+Clarify: I misunderstood:
+str = the string
+letter = the letter in the string that they want the letter after to be capitalized
+so if 
+(makeEveryLetterAfterXCaps('bac', 'a'), it will return 'baC'
 */
 
-/*
-Initial ideas: Need to ascertain how JavaScript reads capital letters, then just make a function that 
-idenitifes the capital, then makes it lowercase, then capitalizes the next letter and concates everything?
+/* Ideas:
+write a function that identifies letter as a variable, then identify str as a variable with an empty ''
+then 
 */
-
 
 var makeEveryLetterAfterXCaps = function (str, letter) {
+    
+    
+    
+    }
+
+
+
+    /* Broken code:
+
+    This is form when I thought we had to identify all capital letters in a string, convert them to lowercase 
+    and then capitalize the next letter:
+    var makeEveryLetterAfterXCaps = function (str, letter) {
     let str = [""];
     let letter = [""];
- // introduce something to search for capital letters
+    let answer = '';
+ // introduce something to search for capital letters 
     const letterIsUpper = (str) => {
         for (let i= 0; i < str.length; i++) {
             // this identifies that the string does not have a capital letter
@@ -37,8 +55,10 @@ var makeEveryLetterAfterXCaps = function (str, letter) {
                 return false; //will return false (no capitals)
             } else if (str[i] === str[i].toUpperCase()) {
                 // now write a function to change the letter after the identified letter to capital
+                // could i just call the function here and then write it below?
             }
         }
     }   
     
     }
+    */
