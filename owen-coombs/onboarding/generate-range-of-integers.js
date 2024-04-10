@@ -15,3 +15,9 @@ function generateRange(min, max, step) {
 // If the difference is equal to or greater than the step, start a loop from min to max with step increments
 // Add each value within the range to the array
 // Return the generated array
+
+/*
+  Ember's Feedback:
+  Great job! :D
+  This will show up in Python later as a range function
+*/
