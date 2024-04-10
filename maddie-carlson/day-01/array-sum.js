@@ -1,20 +1,29 @@
-/* paramas - arr1, arr 2
-   return number
-   example - [1,2], [3,4] => 10 */
-
 function arrayPlusArray(arr1, arr2) {
-  let bothArray = arr1.concat(arr2);
-  let returnValue = 0;
-  for (let value of bothArray) {
-    returnValue += value;
+  // arr1 and arr2 are the parameters, both should be arrays
+  // function should return a number
+  // ex: ([1, 2, 3], [4, 5, 6]), returns 21
+  // function can fail if inputs are the wrong type
+
+  let sum = 0;
+
+  // add each array element sequentially
+  for (let i = 0; i < arr1.length; i++) {
+    sum += arr1[i];
   }
-  return returnValue;
+
+  for (let i = 0; i < arr2.length; i++) {
+    sum += arr2[i]
+  }
+
+  // return sum
+  return sum;
 }
 
 /* Ember's Feedback:
   You did a good job! Very proud :D
-  A+ my man, you paid attention to detail and did the assignment as written.
-  Would feel very comfortably hiring you onto my team if I could.
+  Very good job with your pseudocode!
+
+
   Some example pseudocode below so you get a feel for it.
   PRECEPT
   params - arr1: array of number; arr2: array of numbers

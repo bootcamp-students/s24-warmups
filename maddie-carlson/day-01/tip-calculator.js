@@ -1,35 +1,48 @@
-/* switch case : Terrible -> amount * 0
-        case: poor -> amount * .05
-        case: good -> amount * .1
-        case: great -> amount * .15
-        case: excellent -> amount * .2
-        default: rating not recognized
-
-    make rating uppercase*/
-
 function calculateTip(amount, rating) {
-  rating = rating.toUpperCase();
-  switch (rating) {
-    case "TERRIBLE":
-      return 0;
-    case "POOR":
-      return Math.ceil(amount * 0.05);
-    case "GOOD":
-      return Math.ceil(amount * 0.1);
-    case "GREAT":
-      return Math.ceil(amount * 0.15);
-    case "EXCELLENT":
-      return Math.ceil(amount * 0.2);
-    default:
-      return "Rating not recognised";
+  // parameters are amount and rating, amount should be a number and rating should be a string
+  // should return a number - the tip amount, or a string "rating not recognized"
+  // ex (20, "Excellent"), returns 4
+  // function can fail if an invalid rating or amount is input
+
+  let tip = 0;
+  rating = rating.toLowerCase();
+
+  if (typeof amount != "number") {
+    return "Rating not recognised"
   }
+
+  // set rating to lowercase, compare to the different possible values in a switch statement
+  switch (rating) {
+    case "terrible":
+      tip = 0
+      break;
+    case "poor":
+      tip = amount * 0.05
+      break;
+    case "good":
+      tip = amount * 0.1
+      break;
+    case "great":
+      tip = amount * 0.15
+      break;
+    case "excellent":
+      tip = amount * 0.2
+      break;
+    default:
+      tip = "Rating not recognised"
+      return tip
+  }
+
+  // round tip UP
+  tip = Math.ceil(tip)
+
+  // return tip amount
+  return tip
 }
 
-
 /* Ember's Feedback:
-    Very good job!
-    In your pseudocode, try to make it be more plain logic and less code. Leave the code for the function.
-    When a function hits a return statement it stops executing the rest of the function, so the break statements are unnecessary.
+    Very good job! :D
+    Extra pleased with your guarding statement!!
 
     Giving my solution below "for the soup"
     Concerns for this problem would be if amount was not a number, or -
