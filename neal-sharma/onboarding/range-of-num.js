@@ -1,4 +1,4 @@
-/* 
+/*
 Implement the function generateRange
 -function generateRange(min, max, step)
 which takes 3 arguments (start, stop, step)
@@ -16,18 +16,24 @@ return result array
 
 */
 
-function generateRange(min, max, step){
-    let result = []
-    let currentValue = min;
-    
-    while (currentValue <= max) {
-      result.push(currentValue);
-      
-      currentValue += step;
-    }
-    return result;
+function generateRange(min, max, step) {
+  let result = []
+  let currentValue = min;
+
+  while (currentValue <= max) {
+    result.push(currentValue);
+
+    currentValue += step;
   }
-  
-  console.log(1, 10, 1);
-  console.log(-10, 1, 1);
-  console.log(1, 15, 20);
+  return result;
+}
+
+console.log(1, 10, 1);
+console.log(-10, 1, 1);
+console.log(1, 15, 20);
+
+/*
+  Ember's Feedback:
+  Great job!
+  Range in python when we get to that language
+*/
