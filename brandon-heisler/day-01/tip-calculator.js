@@ -44,3 +44,22 @@ function calculateTip(amount, rating) {
       return "Rating not recognised";
   }
 }
+
+// or, another one
+function calculateTip(amount, rating) {
+  if (isNaN(amount)) return 0;
+
+  const ratings = {
+    "terrible": 0,
+    "poor": 0.05,
+    "good": 0.1,
+    "great": 0.15,
+    "excellent": 0.2,
+  }
+
+  const getTip = (percent) => Math.ceil(amount * percent);
+
+  const tipAmount = getTip(ratings[rating?.toLowerCase()]);
+
+  return Number.isNaN(tipAmount) ? "Rating not recognised" : tipAmount
+}
