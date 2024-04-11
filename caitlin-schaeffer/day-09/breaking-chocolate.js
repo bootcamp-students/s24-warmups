@@ -16,8 +16,7 @@ function breakChocolate(n,m) {
 // you're counting (returning) the *number of breaks* 
 
 function breakChocolate(n,m) {
-// first see how many times n can be broken into 1
-// second see how many times m can be broken into 1
-// third add the number of breaks from n and the number of breaks from m together
-    return 0;
-  }
+    if m > 0 && n >0
+    let x = ((n * m) -1)
+     return x;
+   }

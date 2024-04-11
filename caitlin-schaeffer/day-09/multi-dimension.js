@@ -17,11 +17,11 @@ function getElement(array, indexes) {
 // array.findIndex() is not an accepted kata function, neither is indexOf()
 
 function getElement(array, indexes) {
-    Let currentIndex = array
+    let currentIndex = array
    // Current index is the index array, So index will be a number; So on my input go find whatever is at a given location in the array
-    For (const index of indexes) {
+    for (const index of indexes) {
     //And then whatever you find at the first pass then you need to find the value from that index 
     currentIndex = currentIndex[index];
     }
-    Return currentIndex;
+    return currentIndex;
 }
