@@ -1,15 +1,5 @@
-/* precept
-parameters- check if a number is divisible by 2 numbers.
-return- true or false
-example- n = 3, x = 1, y = 3 => true (3 is divisible by 1 and 3)
-concerns- math..
-explain- if n is divisible by both x and y return true else return false
-positive self talk- I can figure it out with patience
-translate-
-*/
-
 function isDivisible(n, x, y) {
-  if (n % x === 0 && n % y === 0) {
+  if ((n % x === 0) && (n % y === 0)) { //check if n cleanly divides both x and y
     return true
   } else {
     return false
@@ -18,14 +8,8 @@ function isDivisible(n, x, y) {
 /*
   Ember's Feedback:
   Great job!
-*/
-
-// Alternative solution
-function isDivisible(n, x, y) {
-  return n % x === 0 && n % y === 0
-}
-/*
-  The above solution is some expressions nested together.
+  It is best practice to use triple equals (strict equality), as it prevents bugs from weird JS type casting behavior.
+  Remember that for this problem, this you have nested some expressions together.
   n is an expression, it is telling JS to resolve the value stored in n to perform an operation with it
   n % x is an expression. You are telling JS to perform a "remainder" operation because you have used the -
     reminder operator. The left hand operand and the right hand operand are the values in the n and x variables.
@@ -42,3 +26,8 @@ function isDivisible(n, x, y) {
   (        === 0)     (0 ===          )
                   &&
 */
+
+// Alternative solution
+function isDivisible(n, x, y) {
+  return n % x === 0 && n % y === 0
+}

@@ -4,14 +4,14 @@ const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
   // function can fail if inputs are the wrong type or have the wrong units
 
   // assume false by default
-  let can_make_it = false;
+  let canMakeIt = false;
 
   // function to solve is distanceToPump <= mpg * fuelLeft (aka, miles < (miles/gallon) * gallons)
   if (distanceToPump <= mpg * fuelLeft) {
-    can_make_it = true;
+    canMakeIt = true;
   }
 
-  return can_make_it
+  return canMakeIt
 };
 
 /*

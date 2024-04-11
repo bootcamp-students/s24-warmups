@@ -4,14 +4,14 @@ function isDivisible(n, x, y) {
   // function can fail if any parameters are the wrong type
 
   // assume false by default
-  let is_divisible = false;
+  let is_Divisible = false;
 
   // check divisibility with Number.isInteger()
   if (Number.isInteger(n / x) && Number.isInteger(n / y)) {
-    is_divisible = true;
+    is_Divisible = true;
   }
 
-  return is_divisible
+  return is_Divisible
 }
 /* Ember's Feedback:
   Great job!

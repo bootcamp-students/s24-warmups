@@ -18,17 +18,17 @@ var makeEveryLetterAfterXCaps = function (str, letter) {
     return str //return sentence as-is
   }
   
-  let caps_next = true //track if the next letter is to be capitalized between loops
+  let capsNext = true //track if the next letter is to be capitalized between loops
   
   //loop over the array, tracking the given letter to capitalize letters after
   for (let i = index + 1; i < arr.length; i++) {
-    if (caps_next) { //capitalize the current letter
+    if (capsNext) { //capitalize the current letter
       arr[i] = arr[i].toUpperCase()
-      caps_next = false
+      capsNext = false
     }
     
     if (arr[i] == letter) { //capitalize the next letter
-      caps_next = true
+      capsNext = true
     }
   }
   
