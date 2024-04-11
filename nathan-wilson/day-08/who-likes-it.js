@@ -30,3 +30,36 @@ function likes(names) {
 
 // I will take the names array and do a switch case that depending on the amount of people itll return the correct
 // string
+
+let nArray = n.toString().split('');
+let finalNumberArray = [];
+let largerNumberArray = [];
+for (let k = 0; k < nArray.length; k++) {
+  for (let i = k; i < nArray.length; i++) {
+    for (let j = nArray.length - 1; j >= 0; j--) {
+      if (nArray[i] < nArray[j]) {
+        largerNumberArray.push(nArray[j]);
+        console.log(nArray[j]);
+      }
+    }
+    console.log(largerNumberArray);
+    if (largerNumberArray.length != 0) {
+      let numberToReplaceWith = largerNumberArray.sort()[0];
+      console.log(numberToReplaceWith);
+      let indexOfNumber = nArray.indexOf(numberToReplaceWith);
+      console.log(indexOfNumber);
+      nArray[indexOfNumber] = nArray[i];
+      console.log(nArray);
+      nArray[i] = numberToReplaceWith;
+      finalNumberArray.push(Number(nArray.join('')));
+      largerNumberArray = [];
+      console.log(nArray);
+    }
+  }
+}
+finalNumberArray = finalNumberArray.sort();
+if (finalNumberArray[0] === n) {
+  finalNumberArray.shift();
+}
+console.log(finalNumberArray);
+return finalNumberArray[0];

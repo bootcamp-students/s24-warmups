@@ -8,7 +8,9 @@ Should return:
 "and lArry walKed into the park lAte to chase a squirrel"
 If the letter after x is already in caps it should stay in caps. Note that the swapping occurs 
 considering the modified string, so makeEveryLetterAfterXCaps('aaaa', 'a') will result into "aAaA"
+
 Return: string
+
 Solution: 
 
 Given Code:

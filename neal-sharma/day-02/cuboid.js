@@ -9,7 +9,12 @@ translate- formula for finding a cube
 */
 
 class Kata {
-    static getVolumeOfCuboid(length, width, height) {
-      return (length * width * height);
-    }
+  static getVolumeOfCuboid(length, width, height) {
+    return (length * width * height);
   }
+}
+
+/*
+  Ember's Feedback:
+  Great job, really excellent pseudocode :D
+*/
