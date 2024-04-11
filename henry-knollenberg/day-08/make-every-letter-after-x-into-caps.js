@@ -20,3 +20,32 @@
     }
     return capStr;
   }
+
+
+/*Ember -- I tried to restart, approaching it a bit differently, but I came 
+across the same issues. Both of these "solutions" pass the basic
+tests, but fail the random tests. Looking over the random tests, I 
+am almost sure that the test is faulty, but who knows (after all, your 
+solution that you sent me does pass them) - I'm probably
+missing something. Let me know if you can spot my issue. Thanks. My
+second attempt is below.*/
+
+  var makeEveryLetterAfterXCaps = function (str, letter) {
+    let strArray = str.split("");  
+    let nextCap = false;
+    let capStr = "";
+    
+    for (const char of strArray) {
+      if (nextCap === true) {
+        capStr += char.toUpperCase();
+        nextCap = false;
+        continue;
+      } else {
+        capStr += char;
+      }
+      if (char === letter) {
+        nextCap = true;
+      }       
+    } 
+    return capStr;
+  }
