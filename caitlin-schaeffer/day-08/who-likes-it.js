@@ -21,10 +21,27 @@ the phrase 'likes this' (with a few variables)
 If the function is empty it needs to return ('no one likes this')
 If the function returns more than three name it needs to list the first to name and 
 then count all of the other names to return ('name, name, name and 2 others like this')
+
+for loops for the last two, but you basically need to name a function outside of the original 
+likes function and then call that one to the likes function ??
+
+No! I just did this
 */
 
 function likes(names) {
-    let names = ['']
-    
-
+  let status =  ''
+  if (names.length <= 0) {
+     status = 'no one likes this'
+    } else if (names.length == 1) {
+      status = names[0] + ' likes this'
+    } else if (names.length == 2) {
+      status = names[0] + ' and ' + names[1] + ' like this'
+    } else if (names.length == 3) {
+      status = names[0] + ', ' + names[1] + ' and ' + names[2] + ' like this'
+    } else if (names.length >= 4) {
+     status = names[0] + ', ' + names[1] + ' and ' + (names.length - 2) + ' others like this'
+    }
+    return status
   }
+
+  // HA! 
