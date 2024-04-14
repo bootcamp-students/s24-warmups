@@ -1,7 +1,7 @@
 /* need breaks? */
 
 function evalObject(value) {
-  var result = 0;
+  let result = 0;
   switch (value.operation) {
     case '+': result = value.a + value.b; break;
     case '-': result = value.a - value.b; break;
@@ -16,6 +16,8 @@ function evalObject(value) {
 /*
   Ember's Feedback:
   - Good solution.
+  - use let or const, var has odd behavior you can avoid if
+    you just use the two block scope variables
 */
 // Alternate solution
 function evalObject(value) {
