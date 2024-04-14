@@ -20,7 +20,23 @@ function reverse(str) {
 /*
 Variables need to be declared.
 The arrays need to be iterated through.
-We can us opertator and = to save lines
+We can use operator and = to save lines
 strings cant be reversed, only arrays can.
 Convert string to array, reverse, then convert again.
 */
+
+/*
+  Ember's Feedback:
+  - Good job!
+  - Great pseudocode and comments
+*/
+// Alternative solutions
+function multi(arr) {
+  return arr.reduce((accum, curr) => accum * curr); // would throw an error if arr.length < 2 though
+}
+function add(arr) {
+  return arr.reduce((accum, curr) => accum + curr);
+}
+function reverse(str) {
+  return str.split('').reverse().join('');
+}
