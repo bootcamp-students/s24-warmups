@@ -28,8 +28,25 @@ function coinCombo(cents) {
 
 // biggest challenge will be the algorithm to make sure its the minimum amount of coins
 
-// I will take the number of cents, first see if its greater than 25 if so i add the ammount its divisible by to the
+// I will take the number of cents, first see if its greater than 25 if so i add the amount its divisible by to the
 // third index of the return value. Then I do the same pattern with the remaining cents all the way down to pennies and
 // return that array.
 
-// I think this will take a few tried but I'm confident I can find the solution.
+// I think this will take a few tries but I'm confident I can find the solution.
+
+/*
+  Ember's Feedback:
+  - Great job!
+  - Awesome pseudo code :)
+  - Good solution too, no notes really.
+*/
+// Alternative solution
+function coinCombo(cents) {
+  let coins = [25, 10, 5, 1]
+  let remainder = cents
+  return coins.map(coin => {
+    let coinsInCents = Math.floor(remainder / coin)
+    remainder %= coin
+    return coinsInCents
+  }).reverse();
+}
