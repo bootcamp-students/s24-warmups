@@ -21,11 +21,11 @@ function add(arr) {
   return result;
 }
 function reverse(str) {
-  let result = -1;
+  let result = '';
   
-  for (let i = -1; i >= 0; i--){
+  for (let i = str.length -1; i >= 0; i--){
     
-    result >= arr[i]
+    result += str[i];
   }
   return result;
 }
