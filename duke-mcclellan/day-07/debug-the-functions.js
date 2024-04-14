@@ -20,10 +20,10 @@ function add(arr) {
 }
 
 function reverse(str) {
-  let result = -1;
-
-  for (let i = -1; i >= 0; i--) {
-    result >= arr[i]
+  let result = '';
+  
+  for (let i = str.length -1; i >= 0; i--){
+    result += str[i];
   }
   return result;
 }
