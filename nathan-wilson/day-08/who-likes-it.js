@@ -2,20 +2,14 @@ function likes(names) {
   switch (names.length) {
     case 0:
       return 'no one likes this';
-      break;
     case 1:
       return `${names[0]} likes this`;
-      break;
     case 2:
       return `${names[0]} and ${names[1]} like this`;
-      break;
     case 3:
       return `${names[0]}, ${names[1]} and ${names[2]} like this`;
-      break;
     default:
-      return `${names[0]}, ${names[1]} and ${
-        names.length - 2
-      } others like this`;
+      return `${names[0]}, ${names[1]} and ${names.length - 2} others like this`;
   }
 }
 
@@ -26,10 +20,17 @@ function likes(names) {
 
 // likes(['Peter']), 'Peter likes this'
 
-// I couild incorrectly handle the array, i could return an incorrect string as well.
+// I could incorrectly handle the array, i could return an incorrect string as well.
 
-// I will take the names array and do a switch case that depending on the amount of people itll return the correct
+// I will take the names array and do a switch case that depending on the amount of people it'll return the correct
 // string
+
+/*
+  Ember's Feedback:
+  - put old code into a notes.js file so you can reference it later but the solution is kep clean
+  - Great job!
+  - The break statements are unneeded since you return the string value on the line above
+*/
 
 let nArray = n.toString().split('');
 let finalNumberArray = [];

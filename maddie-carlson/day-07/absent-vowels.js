@@ -1,10 +1,10 @@
-function absentVowel(x){
+function absentVowel(x) {
   //takes a string, all the strings are missing a single vowel out of a, e, i, o, u
   //need to check each vowel's inclusion in the sentence
   //needs to return an index from 0 to 4 based on the vowel
-  
+
   x = x.toUpperCase();
-  
+
   //check A, then E, then I, then O, then assume U if none of the others fired
   if (!x.includes("A")) {
     return 0 //missing a
@@ -17,4 +17,13 @@ function absentVowel(x){
   } else {
     return 4 //assume missing u, given parameters
   }
+}
+
+/*
+  Ember's Feedback:
+  - Good job!
+*/
+// Alternate solution
+function absentVowel(x) {
+  return ["a", "e", "i", "o", "u"].findIndex(vowel => !x.includes(vowel));
 }

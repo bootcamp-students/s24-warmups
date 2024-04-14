@@ -21,3 +21,13 @@ function absentVowel(x) {
 // Have an array of the vowels, loop through that array and for each one see if the text contains that vowel, if not return that index
 
 // I can do this, I just need to make sure I use the right methods
+
+/*
+  Ember's Feedback:
+  - Good job!
+  - Awesome pseudo code and solution :D
+*/
+// Alternate solution
+function absentVowel(x) {
+  return ["a", "e", "i", "o", "u"].findIndex(vowel => !x.includes(vowel));
+}
