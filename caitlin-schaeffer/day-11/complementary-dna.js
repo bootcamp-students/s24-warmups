@@ -4,7 +4,8 @@ Your function receives one side of the DNA (string, except for Haskell); you nee
 other complementary side. DNA strand is never empty or there is no DNA at all (again, except for Haskell).
 Params: given string
 Return: string
-Solution: 
+Solution: split the original string, write an if/else statement to return the paired letter,
+map the result of the if/else statement
 
 Given Code: 
 function dnaStrand(dna){
@@ -40,3 +41,19 @@ function dnaStrand(dna){
   return newDNA.join('')
 
   }
+
+  /*
+  Good code I saw after submission:
+  function DNAStrand(dna) {
+  return dna.replace(/./g, function(c) {
+    return DNAStrand.pairs[c]
+  })
+}
+
+DNAStrand.pairs = {
+  A: 'T',
+  T: 'A',
+  C: 'G',
+  G: 'C',
+} 
+*/
