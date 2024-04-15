@@ -17,10 +17,9 @@ function reverse(str) {
 */
 
 function multi(arr) {
-  let sum=1;
-  for (let i = 0; i < arr.length; i ++) {
+  let sum = 1;
+  for (let i = 0; i < arr.length; i++) {
     sum = sum * arr[i];
-    console.log(sum)
   }
   return sum;
 
@@ -38,8 +37,26 @@ function reverse(str) {
   for (let i = str.length - 1; i >= 0; i--) {
     newString += str[i];
   }
-    return newString
+  return newString
 }
+
+
+/*
+  Ember's Feedback:
+  - Good job!
+  - Great pseudo code
+*/
+// Alternative solutions
+function multi(arr) {
+  return arr.reduce((accum, curr) => accum * curr); // would throw an error if arr.length < 2 though
+}
+function add(arr) {
+  return arr.reduce((accum, curr) => accum + curr);
+}
+function reverse(str) {
+  return str.split('').reverse().join('');
+}
+
 
 
 /*

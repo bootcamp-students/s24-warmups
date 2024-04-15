@@ -25,3 +25,7 @@ function likes(names) {
             return `${names[0]}, ${names[1]} and ${length - 2} others like this`;
     }
 }
+/*
+  Ember's Feedback:
+  - Excellent job! :D Killing it
+*/
