@@ -17,3 +17,9 @@ function dnaStrand(dna){
     } 
   } return dnaSequence;
 } 
+
+/*
+Because they are compliments to one another, there really is just a binary choice.
+If "A", then T; if "T" then "A".
+If "C", then "G"; if "G", then "C".
+*/
