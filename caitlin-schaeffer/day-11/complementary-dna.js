@@ -13,22 +13,30 @@ function dnaStrand(dna){
 */
 
 
+
 function dnaStrand(dna){
-    // this will split the dna string into individual letters 
+    // this will split the dna string into individual letters which are strings
     let newArray = dna.split('')
+    console.log('newArray:', newArray)
+    // this does return all of the letters individually
+
 // write an if/else statement 
-    let newDNA(newArray) {
-    if ('a') {
-        return 't'
-    } else if ('t') {
-        return 'a'
-    } else if ('c') {
-        return 'g'
-    } else if ('g') {
-        return 'c'
+   const changeLetter = (inputString) => {
+     console.log(inputString)
+     if (inputString ==='A') {
+        return 'T'
+    } else if (inputString ==='T') {
+        return 'A'
+    } else if (inputString ==='C') {
+        return 'G'
+    } else if (inputString ==='G') {
+        return 'C'
     }
-}
+  
+}   
     // now put all of the letters together
-    return newDNA.concat()
+ const newDNA = newArray.map(dna => changeLetter(dna))
+ console.log(newDNA)
+  return newDNA.join('')
 
   }
