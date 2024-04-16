@@ -1,3 +1,7 @@
+//replace one letter with another
+// use a find function
+
+
 function DNAStrand(dna){
     //your code here
     var result= "";
@@ -26,3 +30,4 @@ function DNAStrand(dna){
        return result;
       }
      
+
