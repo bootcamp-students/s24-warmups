@@ -3,7 +3,7 @@ Instructions: Simple, given a string of words, return the length of the shortest
 String will never be empty and you do not need to account for different data types.
 Params: given string
 Return: length of shortest word in string 
-Solution: 
+Solution: split 's', identify length of substrings, return smallest length of substring
 
 Given Code: 
 function findShort(s){

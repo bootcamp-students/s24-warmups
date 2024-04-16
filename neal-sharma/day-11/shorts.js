@@ -24,3 +24,18 @@ function findShort(s){
     }
     return lengthOfWords; // return length of word with the number of the shortest word found.
   }
+
+
+
+  /*
+s.split splits the string into words so the array is now ['This', 'is', 'Neal'] or whatever the
+test string is. .map(s => s.length) maps each element of the array to its length. example [4, 2, 4],
+Math.min calculates the minimum value of the elements in the array. spread is needed here because it
+makes it so that Math.min checks each number in the array. without the spread it would return
+NaN not a number.
+This uses Math.min to find 
+*/
+
+function findShort(s){
+  return Math.min(...s.split(' ').map(s => s.length));
+}
