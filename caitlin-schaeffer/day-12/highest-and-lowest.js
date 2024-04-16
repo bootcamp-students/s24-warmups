@@ -4,7 +4,9 @@ and have to return the highest and lowest number.
 Params: given string of numbers
 Return: string of the highest and lowest numbers
 Example: highAndLow("1 2 3 4 5");  // return "5 1"
-Solution:
+Solution: use map(Number) to split the string into integer values, then use reduce with a max
+function and reduce with a min function to produce the highest and lowest integers
+then use string interpolation to return the two values together
 
 Given Code: 
 function highAndLow(numbers){
@@ -13,19 +15,20 @@ function highAndLow(numbers){
 */
 
 function highAndLow(numbers){
-    "use strict"
-    let order = numbers.split(' ').map(Number)
-    console.log(order)
-    
-    let orderHigh = order.reduce((max, cur) => max > cur ? max : cur)
+  "use strict"
+  let order = numbers.split(' ').map(Number)
+  console.log(order)
   
-    console.log(orderHigh)
-    
-    let orderLow = order.reduce((min, cur) => min < cur ? min : cur)
-   
-    console.log(orderLow)
-    
-    let fullOrder = orderLow + orderHigh
-    return fullOrder 
-  }
+  let orderHigh = order.reduce((max, cur) => max > cur ? max : cur)
+
+  console.log(orderHigh)
+  
+  let orderLow = order.reduce((min, cur) => min < cur ? min : cur)
+ 
+  console.log(orderLow)
+  
+  let answer = `${orderHigh} ${orderLow}`
+  return answer 
+}
+
 
