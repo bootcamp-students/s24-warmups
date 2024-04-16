@@ -1,3 +1,4 @@
+
 function noSpace(x) {
     return x.replaceAll(' ', '');
 }
@@ -14,3 +15,4 @@ function noSpace(x) {
         If it finds it, it will replace it with the 2nd parameter you give it and return to you the new
         string.
 */
+

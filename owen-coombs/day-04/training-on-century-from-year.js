@@ -10,3 +10,4 @@ function century(year) {
   - Awesome job!
   - Flesh out your logic in this pseudocode, practice communicating. Give some examples at the least.
 */
+
