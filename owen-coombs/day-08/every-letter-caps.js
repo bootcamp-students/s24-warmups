@@ -1,18 +1,24 @@
 //return should be uppercase letters after x
 
- const makeEveryLetterAfterXCaps = function (str, letter) {
-    let result = "";
-    let capitalizeNext = false;
-      
-    for (let i = 0; i < str.length; i++) {
+const makeEveryLetterAfterXCaps = function (str, letter) {
+  let result = "";
+  let capitalizeNext = false;
+
+  for (let i = 0; i < str.length; i++) {
     let currentChar = str[i];
-    
+
     if (capitalizeNext) {
       currentChar = currentChar.toUpperCase();
     }
-      capitalizeNext = currentChar === letter;
-      result += currentChar;
-    }
-      
-      return result;
-    };
+    capitalizeNext = currentChar === letter;
+    result += currentChar;
+  }
+
+  return result;
+};
+
+/*
+  Ember's Feedback:
+  - Good job!
+  - We explained this in class so just LMK if you want to go over it again for understanding
+*/
