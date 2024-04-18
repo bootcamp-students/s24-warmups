@@ -10,3 +10,9 @@ class Kata {
 // I could use an incorrect formula or syntax issue
 // Multiply length by width by height
 // I know I can do this!
+
+/*
+  Ember's Feedback:
+  Great job!
+  Pretty much the only way to do this lol
+*/

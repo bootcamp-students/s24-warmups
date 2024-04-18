@@ -17,3 +17,9 @@ function generateRange(min, max, step) {
 // create a loop that starts at min and pushes it to an array
 // the loop will iterate i += step
 // return the array
+
+/*
+  Ember's Feedback:
+  - Great job!
+  - This is essentially the range function that you get for free in python.
+*/
