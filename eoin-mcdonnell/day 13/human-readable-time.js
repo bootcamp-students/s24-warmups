@@ -14,6 +14,7 @@ function humanReadable(seconds) {
     let sec = 0,
         min = 0,
         hour = 0;
+    //divid the seconds appropriately
     sec = seconds % 60
     min = Math.floor(seconds/60) % 60;
     hour = Math.floor(seconds/3600);
