@@ -8,7 +8,8 @@ SS = seconds, padded to 2 digits, range: 00 - 59
 Params: it will give an integer (seconds)
 Return: we will return the input formatted
 Example:  doTest(  3599, '00:59:59');
-Solution: 
+Solution: Run a bunch of if statements after establishing math ceiling and floor, 
+going through hours, minutes, and seconds. 
 
 Given Code: 
 function humanReadable (seconds) {
@@ -27,8 +28,46 @@ More like always modulo the number by 60, and take whatever that value is and
 then keep track of seconds, and then mins and then hours 
 */
 
+
+function humanReadable(seconds) {
+  // Set the bottom first, write an if for the floor and ceiling 
+    if ( seconds < 0 || seconds > 360000 ) {
+      return null;
+    }
+  // Run an if statement to establish hours
+    let hours = Math.floor( seconds / 3600 );
+    seconds -= hours * 3600;
+    if ( hours < 10 ) {
+      hours = '0' + hours;
+    }
+   // Run an if statement to establish minutes
+    let minutes = Math.floor( seconds / 60 );
+    seconds -= minutes * 60;
+    if ( minutes < 10 ) {
+      minutes = '0' + minutes;
+    }
+   // Run an if statement to establish seconds
+    if ( seconds < 10 ) {
+      seconds = '0' + seconds;
+    }
+     // Return all of the variables with the colons
+    return hours + ':' + minutes + ':' + seconds;
+  }
+
+
+
+/* 
+Code work out:
 function humanReadable (seconds) {
 
+// we need to set something that takes care of 0 seconds 
+  if (seconds < 0 || seconds > 359999) {
+    return null
+  }
+  if (seconds === 0) {
+    return '00:00:00'
+  }
+// now do the math for time
     let secs = seconds / 60
     if (secs <= 9) {
         return '0' + secs
@@ -39,9 +78,7 @@ function humanReadable (seconds) {
     return time;
   }
 
-
-
-  //     let secs = seconds.filter(x => x >= 0 && x >= 59)
+//     let secs = seconds.filter(x => x >= 0 && x >= 59)
 //   if (x <= 59) {
 //     return x
 //   } else if (x === 60) {
@@ -54,3 +91,4 @@ function humanReadable (seconds) {
 //   }
 
   // orrrrr do this for all things as a stack?
+  */
