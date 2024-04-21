@@ -23,18 +23,17 @@ function longest(s1, s2) {
 
 
 function longest(s1, s2) {
-    // your code
-    //Create Arrays a and b containing unique values by making them Set and converting them back to array.
+    //Create arrays from input
     let string1 = [... new Set(s1.split(""))];
     let string2 = [... new Set(s2.split(""))];
   
-    //combine both arrays into one
+    //combine both arrays into one big array
     for (let i=0; i<string2.length; i++){
         string1.push(string2[i]);
     }
     //create a unique array from the combination
     let init_combo = [... new Set(string1)];
-    //sort array and join to form a string
+    //sort the new array and join to form a string
     let combo = init_combo.sort().join("");
     //Return the final result
     return combo;
