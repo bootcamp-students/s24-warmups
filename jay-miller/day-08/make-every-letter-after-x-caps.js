@@ -1,4 +1,4 @@
-var makeEveryLetterAfterXCaps = function (str, letter) {
+const makeEveryLetterAfterXCaps = function (str, letter) {
   let letterArray = str.split('');
   for (let i = 0; i < letterArray.length -1; i++) {
     if (letter === letterArray[i]) {
