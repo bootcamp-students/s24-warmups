@@ -1,6 +1,5 @@
 function houseNumbersSum(inputArray) {
     let zero = inputArray.indexOf(0);
-    let restOfArray = inputArray.length - zero;
     let newArray = inputArray.splice(0, zero);
     console.log(newArray)
     
