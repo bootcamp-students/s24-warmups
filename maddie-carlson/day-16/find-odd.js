@@ -20,7 +20,7 @@ function findOdd(A) {
         return tracker
       } else {
         tracker = A[i]
-        count += 1
+        count = 1
       }
     }
   }
