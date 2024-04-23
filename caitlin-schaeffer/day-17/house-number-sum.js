@@ -3,7 +3,7 @@ Instructions: Add up the numbers in an integer array, stopping at the number 0.
 Example: Test.assertEquals( houseNumbersSum([5, 1, 2, 3, 0, 1, 5, 0, 2]),11)
 Params: given integer array
 Return: single value
-Solution: an if else statement
+Solution: an if else statement nested in a reduce 
 
 Given Code: 
 function houseNumbersSum(inputArray) {
