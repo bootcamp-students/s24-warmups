@@ -2,7 +2,7 @@
 Params: Debug the functions: Should be easy, begin by looking at the code. Debug the code and the functions should work.
 There are three functions: Multiplication (x) Addition (+) and Reverse (!esreveR)
 Return: a number (whatever each equation results)
-Solutions: right a for loop to perform each function, you're not just adjusting the given code
+Solutions: write  a for loop to perform each function, you're not just adjusting the given code
 
 Given Code:
 function multi(arr) {
