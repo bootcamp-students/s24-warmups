@@ -6,7 +6,7 @@ or
     assert.strictEqual(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]), "(123) 456-7890")
 Params: given an array of integers 
 Return: Must return "(123) 456-7890", must return it in that format with spaces 
-Solution: 
+Solution: returning an array of strings 
 
 Given Code: 
 function createPhoneNumber(numbers){
@@ -16,15 +16,11 @@ function createPhoneNumber(numbers){
 
 // Basically you need to randomize (or not randomize) just take an array of integers into a string 
 
-// this didnt work
 function createPhoneNumber(numbers){
-    function createPhoneNumber(numbers){
-      let number = '(' + arr[0] + arr[1] + arr[2] +"'" + ")" + arr[3] + arr[4] + arr[5] + arr[6] + arr[7] + arr[8] + arr[9] +''
-      console.log(number)
-      return number 
-  }
-  }
+  console.log(numbers[8]) 
+return '(' + numbers[0] + numbers[1] + numbers[2] + ')' + ' ' + numbers[3] + numbers[4] + numbers[5] + '-' + numbers[6] + numbers[7] + numbers[8] + numbers[9] +''
+}
 
-/* Ember says:
-'('+ arr[0] + arr[1] + arr[2]+') ' + 
+/* 
+Thank you for Ember for reminding me how to access the index of the array
 */
