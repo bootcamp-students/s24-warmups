@@ -5,7 +5,7 @@ and spaces. Spaces will be included only when more than one word is present.
 Example: "Hey fellow warriors"  --> "Hey wollef sroirraw" ; "This is a test   --> "This is a test" 
 Params: given a string
 Return: a string
-Solution: 
+Solution: split the string into an array of words, map each word to check if it's length is 5 or >, reverse if so, return a new array joined back together.
 
 Given Code:
 function spinWords(string){
@@ -14,5 +14,18 @@ function spinWords(string){
 */
 
 function spinWords(string){
-    //TODO Have fun :)
+    let newWords = string.split(" ")
+    console.log(newWords)
+  
+    
+    let reverseWords = newWords.map((words) => {
+        if (words.length >= 5) {
+          return words.split("").reverse().join("")
+        } 
+        return words
+        
+      })
+        return reverseWords.join(" ")
+  
   }
+
