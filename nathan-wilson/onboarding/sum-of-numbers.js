@@ -14,3 +14,8 @@ function getSum(a, b) {
 // Make the larger one the end of a loop
 // Add each number in the loop to a sum variable
 // return the sum
+
+/*
+  Ember's Feedback:
+  - wonderful job!
+*/

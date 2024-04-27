@@ -1,0 +1,22 @@
+function longest(s1, s2) {
+ let combinedStr = s1+ s2
+ 
+let combinedArr = combinedStr.split("")
+console.log (combinedArr);
+combinedArr.sort()
+
+  let filtered = combinedArr.filter((acc, curr) => combinedArr.indexOf(acc) === curr);
+  let arrayStr = filtered.join("")
+  
+  return arrayStr
+
+ 
+
+}
+
+
+// add both strings to an array 
+// use .split to split array
+// use .filter 
+// use .join to join 
+// return will be a string

@@ -14,3 +14,9 @@ function between(a, b) {
 // E initiate an empty array variable. Make a loop that loops through b amount of times, starting at 1.
 // For each iteration push the current value to the empty array. Then return that array.
 // I'm confident that I can do this
+
+/*
+  Ember's Feedback:
+  Great job!
+  There is pretty much the best way to do this.
+*/
