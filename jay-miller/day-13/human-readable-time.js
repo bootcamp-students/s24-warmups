@@ -28,6 +28,7 @@ function humanReadable(seconds) {
   - Great job!
   - The maximum value from the prompt is actually 359999 not 360000
   - The last comment below the return doesn't make sense
+  - I recommend never using var
 */
 // Alternative Solution
 function humanReadable(seconds) {
