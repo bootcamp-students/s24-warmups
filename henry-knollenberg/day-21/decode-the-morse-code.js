@@ -17,6 +17,7 @@ decodeMorse = function(morseCode){
         return " ";
       }
     })
+    let decodedStr = decodedArr.join("");
     let formatStr = decodedStr.replaceAll("  ", " ");
     return formatStr;
   }
