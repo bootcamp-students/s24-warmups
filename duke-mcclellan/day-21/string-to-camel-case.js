@@ -9,14 +9,14 @@
 
 function toCamelCase(str){
   return str
-    .split(/[-_]/)
-    .map((word, index) => {
+    .split(/[-_]/) //removing dashes and underscore
+    .map((word, index) => { //map over each word and index 
       if (index === 0) {
-        return word;
+        return word;  //if the index is 0 word is to be left alone
       }
       return (
-      word.charAt(0).toUpperCase() + word.slice(1)
+      word.charAt(0).toUpperCase() + word.slice(1) //also want to return a word character at index 0 to be uppercased and to return the extracted part of the string
         );
   })
-  .join('')
+  .join('') //finally join the string back together. 
 }
