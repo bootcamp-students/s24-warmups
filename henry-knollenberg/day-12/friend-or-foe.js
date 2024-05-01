@@ -8,7 +8,14 @@ Return the new array.
 
 "use strict";
 
-function friend(friends){
+function friend(friends) {
   let surelyFriends = friends.filter(word => word.length === 4);
   return surelyFriends;
 }
+/*
+  Ember's Feedback:
+  - good job!
+*/
+// Alternative Solution
+// The only other way to do this is with a for loop and build a return array.
+// Same logic.
