@@ -1,3 +1,18 @@
+/*
+    P - #, array, string, romanArr
+    R - joined romanArr
+
+    split number into array of integers
+    return the roman numeral for each place in the number
+    M for 1000
+    C-CM 100-900
+    X-XC 10-90
+    I-IX 1-9
+
+    functions with switch cases
+*/
+
+
 function solution(number){
     let arr = number.toString().split("")
     let romanArr = [];
