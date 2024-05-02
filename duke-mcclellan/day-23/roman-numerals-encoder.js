@@ -3,7 +3,7 @@
 //example - 1 -->       "I"
 //concern - never done a kata like this before.  Not sure how to approach it and 
 //could use wrong methods or get sidetracked. 
-//explain - I want to be able to create a function that takes 1-3999 as integer
+//explain - I use a map object and include the key value pairs for the numeral and the integer. 
 //and returns roman numerals for the number.  
 
 function solution(num){
