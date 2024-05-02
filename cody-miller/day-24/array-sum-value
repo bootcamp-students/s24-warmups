@@ -1,0 +1,8 @@
+function sum(array) {
+    let summedArray = array.reduce((acc, curr) => acc + curr);
+    console.log(summedArray);
+    return summedArray;
+}
+
+// Must add all the values in the array together.
+// This is the simple and standard use of the reduce method.
