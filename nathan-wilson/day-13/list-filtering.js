@@ -15,3 +15,13 @@ function filter_list(l) {
 // Take the array and filter out typeof strings and return the filtered array
 
 // I can do this! I believe in myself
+
+/*
+  Ember's Feedback:
+  - Great job!
+  - typeof is really powerful
+*/
+// Alternative Solution
+function filter_list(l) {
+  return l.filter(Number.isInteger);
+}
