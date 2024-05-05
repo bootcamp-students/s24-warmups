@@ -10,7 +10,7 @@ Examples: 1990 is rendered: 1000=M + 900=CM + 90=XC; resulting in MCMXC.
 Params: given integer
 Return: string value of integer
 Note: If the number is between 900 and 1000, it is the 1 unit minus the 10 unit, if the number is between 500 and 900, it is the 5 unit plus the 1 unit
-Solution: 
+Solution: basically just needed to add all of the numerals that can't be easily added up and assign their values then adjust the result with the keys 
 
 Given Code:
 function solution(number){
@@ -20,6 +20,49 @@ function solution(number){
 
 */
 
+//Adding more consts to address the weird numbers (like 4 and 90 that aren't easily added up by the numerals)
+
+const numerals = {
+    M: 1000,
+    CM: 900,
+    D: 500,
+    CD: 400,
+    C: 100,
+    XC: 90,
+    L: 50,
+    XL: 40,
+    X: 10,
+    IX: 9,
+    V: 5,
+    IV: 4,
+    I: 1
+};
+
+function solution(number) {
+    // this is a guard line that produces a message if the number is less than 1 or greater than 399
+    if (number < 1 || number > 3999) {
+        return "Number out of range";
+    }
+    //this makes sure the result is a string
+    let result = '';
+    
+    //this loop iterates through the numerals (object above) and constructs the Roman numeral representation from those options
+    for (let key in numerals) {
+        while (number >= numerals[key]) {
+            result += key;
+            number -= numerals[key];
+        }
+    }
+
+    return result;
+}
+
+
+
+
+
+/*
+This code was so close but it was getting so long and unruly and I was losing track of where I had fixed it and where I hadn't
 // logic is almost done on i!!!
 
 const numerals = {
@@ -114,6 +157,7 @@ function solution(number){
   return mCount + dCount + cCount + lCount + xCount + vCount + iCount
 
 }
+*/
 
 /*
 This was Embers Code:
