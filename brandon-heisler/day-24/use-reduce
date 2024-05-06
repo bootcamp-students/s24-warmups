@@ -1,0 +1,7 @@
+function sum(array) {
+  let initialValue = 0
+ const reduceSum = array.reduce((accumulator, currentValue) => accumulator + currentValue, initialValue)
+return reduceSum
+ }
+
+

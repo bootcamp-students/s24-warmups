@@ -1,6 +1,6 @@
 function solution(number) {
-  
-    let roman = {
+  // Create an object to be referenced
+  let roman = {
     M: 1000,
     CM: 900,
     D: 500,
@@ -15,15 +15,20 @@ function solution(number) {
     IV: 4,
     I: 1,
   };
-  let str = "";
 
-  for (let i of Object.keys(roman)) {
-    let q = Math.floor(num / roman[i]);
-    num -= q * roman[i];
-    str += i.repeat(q);
+  // We need a string returned, so I create one here
+  let string = "";
+  // Mapping over the Roman numeral only
+  for (let key of Object.keys(roman)) {
+    // Rounding down to see how many times the given number is divisible by the roman numeral value
+    let howMany = Math.floor(number / roman[key]);
+    // Updating the number to be passed down to next roman numeral calculation
+    number -= howMany * roman[key];
+    // How ever many times it's divisible will then be turned into a string and concatenated together
+    string += key.repeat(howMany);
   }
 
-  return str;
+  return string;
 }
 
 /*
