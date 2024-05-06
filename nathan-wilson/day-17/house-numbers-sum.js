@@ -15,3 +15,20 @@ function houseNumbersSum(inputArray) {
 //use reduce and just add the acc and cur together. Return the result
 
 // I believe I can do this!!
+
+/*
+  Ember's Feedback:
+  - Great job!
+  - So the + 1 in your slice means you never get an empty array, preventing .reduce from throwing an error.
+    An alternative to that would be to give your .reduce an initial value of 0.
+*/
+// Alternative Solution
+function houseNumbersSum(inputArray) {
+  // iterate over the array, producing a sum, until I encounter a zero
+  let sum = 0;
+  for (let int of inputArray) {
+    if (int === 0) return sum;
+    sum += int
+  }
+  return sum;
+}
