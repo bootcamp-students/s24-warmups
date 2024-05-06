@@ -1,0 +1,31 @@
+function countGrade(scores){
+    
+    const S = scores.filter(score => score === 100).length;
+    console.log(S);
+    const A = scores.filter((score) => score < 100 && score >= 90).length;
+    console.log(A);
+    const B = scores.filter((score) => score < 90 && score >= 80).length;
+    console.log(B);
+    const C = scores.filter((score) => score < 80 && score >= 60).length;
+    console.log(C);
+    const D = scores.filter((score) => score < 60 && score >= 0).length;
+    console.log(D);
+    const X = scores.filter((score) => score === -1).length;
+    console.log(X);
+
+    const gradeDistribution = {
+        "S": S,
+        "A": A,
+        "B": B,
+        "C": C,
+        "D": D,
+        "X": X
+    };
+    return gradeDistribution;
+}
+// We are given an array of grades that needs to be filtered into an object
+// We need an equation and/or if/else statement that will handle the sorting conditions
+// We then need to open up the array and convert them into key-value pairs
+
+// Just kidding. The answer was simpler. Just filter the conditions and get the length
+// of the new array. Then just create an object yourself. Easy peasy.
