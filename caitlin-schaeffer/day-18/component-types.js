@@ -1,9 +1,9 @@
 /*
-Instructions: 
-Example: 
-Params: 
-Return: 
-Solution: 
+Instructions:
+Example:
+Params:
+Return:
+Solution:
 
 Given Code:
 const React = require('react');
@@ -13,12 +13,17 @@ const React = require('react');
 const React = require('react');
 //add Hello, World and Greet components here. refer to description if you are stuck. good luck :)
 
-const Hello=()=><h1>Hello</h1>;
+const Hello = () => <h1>Hello</h1>;
 
-const World=()=><h2>World!</h2>;
+const World = () => <h2>World!</h2>;
 
 class Greet extends React.Component {
     render() {
         return (<div><Hello /><World /></div>)
     }
 }
+/*
+    Ember's Feedback:
+    - Great job!
+    - Components are kind of like JS functions :D (just with their own quirky behavior when called within React)
+*/
