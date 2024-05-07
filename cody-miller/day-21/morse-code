@@ -1,0 +1,20 @@
+decodeMorse = function(morseCode){
+  console.log("The input: ", morseCode);
+  let sillyDots = morseCode.trim().split("   ");
+  
+  console.log("Has this been trimmed?: ", sillyDots);
+  
+  let decodedMessage = "";
+  for (let morseWord of sillyDots) {
+    let morseChars = morseWord.split(" ");
+    for (let morseChar of morseChars) {
+      if (MORSE_CODE.hasOwnProperty(morseChar)) {
+        decodedMessage += MORSE_CODE[morseChar];
+      }
+    }
+    decodedMessage += " ";
+  }
+  
+  console.log(decodedMessage);
+  return decodedMessage.trim();
+}
