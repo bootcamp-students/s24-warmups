@@ -1,0 +1,6 @@
+def get_size(w,h,d):
+    area = 2*(w*d + h*d + h*w)
+    volume = w*h*d
+    return [area, volume]
+
+# Its a box. You multiply sides together

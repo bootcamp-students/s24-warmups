@@ -7,7 +7,6 @@ function findOdd(A) {
       }
     }
     if (currentCount % 2 != 0) {
-      console.log('current ', A[i]);
       currentCount = 0;
       return A[i];
     }
@@ -22,9 +21,19 @@ function findOdd(A) {
 
 // [7], 7
 
-// I could return an integer that isnt odd, i could throw a type error
+// I could return an integer that isn't odd. I could throw a type error
 
 // Take the array and filter out things that appear an even amount of times, return the only integer
 // left in the array
 
 // I can do this!
+
+/*
+  Ember's Feedback:
+  - Great job!
+  - The nest loops are good, here is what that would more or less look like but with array methods instead.
+*/
+// Alternative Solution
+function findOdd(A) {
+  return A.find(int => A.filter(el => el === int).length % 2 !== 0);
+}

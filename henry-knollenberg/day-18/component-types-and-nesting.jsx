@@ -8,3 +8,9 @@ class Greet extends React.Component {
     return <div><Hello /><World /></div>;
   }
 }
+/*
+  Ember's Feedback:
+  - Good job!
+  - React component are kind of like functions, but with a bunch of extra
+    rules and behaviors
+*/
