@@ -27,3 +27,21 @@ if (string.length <= 4){
     return string.split . replace with #
 }
 */
+function maskify(cc) {
+    if (cc.length <= 4){
+      return cc
+    } else if (cc.length >= 5){
+    let end = cc.length - 4
+    let short =  cc.substring(0, end)
+    console.log("short:", short)
+    //short is all of the numbers but the last four
+    //okay it breaks down after this and i think it's because split makes it an array and replaceAll is a string method 
+    let everyElement = short.split('')
+    console.log("everyElement:", everyElement)
+    let replace = everyElement.replaceAll(' ', '#')
+    console.log('replace:', replace)
+      let answer = replace + end
+      return answer
+    }
+  }
+  

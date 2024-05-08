@@ -2,7 +2,7 @@ function findOdd(A) {
   return A.find((int) => A.filter((el) => el === int).length % 2 !== 0);
 }
 /*
-We are given an array of intergers, which means we should use array methods.
+We are given an array of integers, which means we should use array methods.
 By using module 2, we will know if there will be a leftover, that is means it is
 odd.
 We can filter out based on if theres module 2 =0
@@ -32,3 +32,13 @@ I need a way to count the amount of times an integer appears in an array
 // }, {});
 
 // console.log(count);
+
+/*
+  Ember's Feedback:
+  - Good job!
+*/
+// Alternative Solution
+// This uses XOR (^), which is a bitwise operator :D
+function findOdd(A) {
+  return A.reduce((a, c) => a ^ c, 0);
+}

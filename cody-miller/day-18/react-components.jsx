@@ -13,6 +13,10 @@ class Greet extends React.Component {
     );
   }
 }
-//Create a react component using the arrow function similar to the 
+//Create a react component using the arrow function similar to the
 //      instructions
 //Utilize the class structure exactly like the instructions
+/*
+  Ember's Feedback:
+  - Great job!
+*/
