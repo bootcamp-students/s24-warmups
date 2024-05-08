@@ -13,3 +13,8 @@ class Greet extends React.Component {
     return <div><Hello /><World /></div>
   }
 }
+/*
+  Ember's Feedback:
+  - Great job!
+  - class components are outdated so hopefully you don't have to use it on the job.
+*/
