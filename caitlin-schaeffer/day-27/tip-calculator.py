@@ -22,23 +22,25 @@
 # If tip = poor, amount * .5
 # etc
 
+# was originally using round() but it wasn't working as I thought, so imported math and did math.ceil()
+import math
 
 def calculate_tip(amount, rating):
     x = rating.lower()
     if (x == "terrible"):
       ter =  amount * 0 
-      return round(ter)
+      return math.ceil(ter)
     elif (x == "poor"):
        po = amount * .05
-       return round(po)
+       return math.ceil(po)
     elif (x == "good"):
        go = amount * .10
-       return round(go)
+       return math.ceil(go)
     elif (x == "great"):
        gr = amount * .15
-       return round(gr)
+       return math.ceil(gr)
     elif (x == "excellent"):
        ex = amount * .2
-       return round(ex)
+       return math.ceil(ex)
     else:
        return "Rating not recognised"
