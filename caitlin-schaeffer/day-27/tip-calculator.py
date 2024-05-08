@@ -12,7 +12,8 @@
 # Params: given integer and tip rating 
 # Return: 
 # Concerns: rounding up in python is unknown
-# Solution: 
+# Solution: set a variable at the beginning to make sure each rating is coerced into lower case, ran through an if else statement to 
+# check for each rating, and applying math.ceil to the result of each tip amount
 
 # Given Code: 
 # def calculate_tip(amount, rating):
