@@ -10,7 +10,16 @@ test and is included in the array. if not it is filtered out.
 */
 "use strict";
 function filter_list(l) {
-  
+
   let numbers = l.filter((e) => typeof e === 'number');
   return numbers
+}
+/*
+  Ember's Feedback:
+  - Great job!
+  - typeof is a really useful operator, I hope you got a good feel for it
+*/
+// Alternative Solution
+function filter_list(l) {
+  return l.filter(Number.isInteger);
 }

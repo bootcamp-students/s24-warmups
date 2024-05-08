@@ -29,5 +29,4 @@ function pigIt(str){
     })
     console.log('pig:', pig)
     return pig.join(' ')
-    
   }

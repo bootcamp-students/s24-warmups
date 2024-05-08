@@ -11,7 +11,15 @@ translate- comments
 */
 
 function friend(friends){
-    let friend = friends.filter(name => name.length === 4)// using filter filter out names that 
-    //dont equal four and return names equal to four. 
+    let friend = friends.filter(name => name.length === 4)// using filter filter out names that
+    //don't equal four and return names equal to four.
     return friend;
 }
+
+/*
+    Ember's Feedback:
+    - Awesome! :D
+    - Filter is a really nice method, I hope it clicked for you
+*/
+// Alternative Solution
+let getFilteredFriends = (friends) => friends.filter(name => name.length === 4)

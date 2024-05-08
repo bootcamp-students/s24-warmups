@@ -23,3 +23,7 @@ class Greet extends React.Component {
     );
   }
 }
+/*
+  Ember's Feedback:
+  - Good job!
+*/
