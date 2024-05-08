@@ -18,7 +18,7 @@ function World() {
 
 //create a class named Greet that extends React Component, then render and return Hello and World together
 class Greet extends React.Component {
-  render() { 
+  render() {
     return (
       <div>
         <Hello/>
@@ -27,3 +27,9 @@ class Greet extends React.Component {
     )
   }
 }
+/*
+  Ember's Feedback:
+  - Good job!
+  - React components are like functions, but they are run every time state in the component updates, or if the state of the parent
+    component updates. That unidirectional data flow that React wants to enforce is part of the what makes React such a popular library.
+*/

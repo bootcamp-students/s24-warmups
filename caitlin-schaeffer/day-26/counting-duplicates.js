@@ -43,7 +43,7 @@ function duplicateCount(text){
             else if (count >= 2) {
                 console.log(`${text[i]} occurs ${count} times`)
               return count
-            } // to this point it returns a console log of things that has something occurring twice or more
+            } // to this point it returns a console log of things that has something occurring twice or more, not sure how to move that over though
     }
 }
 
