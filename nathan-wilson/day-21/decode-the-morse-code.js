@@ -23,3 +23,14 @@ decodeMorse = function (morseCode) {
 
 // trim the morseCode, split at the triple spaces, pass each of the strings in the new array into MORSE_CODE
 // join that array and return it
+
+/*
+  Ember's Feedback:
+  - Great job!!!
+*/
+// Alternative Solution
+decodeMorse = function (morseCode) {
+  return morseCode.trim().replaceAll(/([\.\-]+)\s{0,2}/g, (_, p1) => {
+    return MORSE_CODE[p1]
+  });
+}

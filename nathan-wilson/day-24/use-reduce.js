@@ -15,3 +15,8 @@ function sum(array) {
 // Take the array use reduce and just add acc and cur
 
 // I can do this!
+
+/*
+  Ember's Feedback:
+  - Great job!
+*/
