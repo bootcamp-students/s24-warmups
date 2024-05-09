@@ -7,7 +7,7 @@ def find_short(s):
             length = len(word)
     return length
 
-# also this woud work
+# also this work
 
 def find_short(s):
 #split the wor
