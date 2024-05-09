@@ -5,12 +5,19 @@
 //Should be able to slice numbers into parts and join together using template literal `${}`
 
 
-function createPhoneNumber(numbers){
-
+function createPhoneNumber(numbers) {
     let areaCode = numbers.slice(0, 3).join('');
     let mainNumbers1 = numbers.slice(3, 6).join('')
     let mainNumbers2 = numbers.slice(6, 10).join('')
     let fullNumber = `(${areaCode}) ${mainNumbers1}-${mainNumbers2}`
     return fullNumber;
-   
+}
+/*
+    Ember's Feedback:
+    - Great job!
+    - Good use of slice, great job using a template!
+*/
+// Alternative Solution
+function createPhoneNumber(numbers) {
+    return numbers.reduce((a, c) => a.replace('#', c), '(###) ###-####');
 }

@@ -1,6 +1,6 @@
 
 /*
-paremters- move the first letter of each word to the end and add ay to the end as well
+parameters- move the first letter of each word to the end and add ay to the end as well
 return- the string with the letters moved for pig latin.
 example- pigIt('Pig latin is cool'); // igPay atinlay siay oolcay
 concerns- not sure how to go about it yet. Will most likely need google
