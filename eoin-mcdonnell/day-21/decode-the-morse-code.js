@@ -1,3 +1,10 @@
+/*
+  Ember's Feedback:
+  - Also not reading this, no idea why some of this is commented
+  - the stuff that isn't commented is incomplete
+  - to get the feedback you are paying for you need to give me something I can work with
+*/
+
 //more code library loaded
 //iterate ovr the message and look for the value in more code library?
 // found the way to get moreode to spit out the compliant letter
@@ -23,7 +30,7 @@ decodeMorse = function(morseCode){
       }
     } else {
       decodedMessage += MORSE_CODE[newText[i]];
-    }      
+    }
   }
   console.log(decodedMessage)
   return decodeMorse
