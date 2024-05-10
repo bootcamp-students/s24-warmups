@@ -1,3 +1,7 @@
+/*
+  Ember's Feedback:
+  - I am not reading this
+*/
 
 oldmcdonnell
 // check if the string starts with a capital letter
@@ -5,23 +9,23 @@ oldmcdonnell
 //precepts property str
 // requirements change letter case and return without dashes or underscores
 // seperate function for capitalize
-// 
+//
 /*-
 function toCamelCase(str){
   let strArray;
-  
+
   if (str === ""){
     return "";
   }
-  
+
   if (str.indexOf('-') !== -1){
       strArray = str.split('-')
     } else {
       strArray = str.split('_')
     }
-  
+
   let ccString = strArray[0];
-  
+
   for (let i = 1; i < strArray.length; i++){
     ccString +=  capitalize(strArray[i]);
   }
@@ -97,7 +101,7 @@ function toCamelCase(str){
             const words = [first + second.join('')].join('');
             const resultWords = result.push(words);
             //console.log(resultWords);
-        }; 
+        };
 
     function answer() {
         const end = word[0]+result.join('')
@@ -115,7 +119,7 @@ KumarG23
 //precepts property str
 // requirements change letter case and return without dashes or underscores
 // seperate function for capitalize
-// 
+//
 
 function toCamelCase(str){
   let split = str.replaceAll('-', '_').split('_');
@@ -123,12 +127,12 @@ console.log(split);
   if (split.length === 1){
     return split[0];
   }
-  
+
   for (let i = 1; i < split.length; i++){
 console.log(split);
       split[i] = split[i][0].toUpperCase() + split[i].slice(1);
     } // spit[i][0] = first letter + split[i].slice(1) = rest of word. w/ out slice we only
-  // return the first letters capitalized. 
+  // return the first letters capitalized.
 
   return split.join('');
 }
