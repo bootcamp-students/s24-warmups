@@ -21,6 +21,12 @@ function toCamelCase(str) {
   - Really awesome work :D
 */
 // Alternative Solutions
+/* Regex here gets either a - or a _ and the thing after it, replacing it with
+    what you return from the function you give to .replace.
+    The function you gave to .replace ignores the whole match, which is the 1st parameter.
+    Instead you get the 1st capture group and uppercase it.
+    The capture group being the parentheses, which is the thing directly after the - or _
+*/
 function toCamelCase(str) {
   return str.replaceAll(/[-_](.)/g, (match, p1) => p1.toUpperCase());
 }

@@ -19,6 +19,10 @@ decodeMorse = function (morseCode) {
     It reads like you were kind of stumbling through what to do with the spaces.
 */
 // Alternative Solutions
+// RegEx here matches any number of literal . characters and literal - characters, followed by 0 to 2 spaces
+// That whole match, spaces and all, are replaced by the output from the function I give .replaceAll
+// The function given to replace all takes the capture group, denoted by parenthesis, (i.e. just the dots and dashes)
+// and plugs that into the MORSE_CODE object. It then replaces the whole match with that return value.
 decodeMorse = function (morseCode) {
   return morseCode.trim().replaceAll(/([\.\-]+)\s{0,2}/g, (_, p1) => {
     return MORSE_CODE[p1]
