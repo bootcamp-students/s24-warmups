@@ -35,3 +35,45 @@ function solution(number) {
 This should be very similar to our getCurrentTime Kata in that
 we have to divide by a larger number, then pass it along to the next divisor.
 */
+
+/*
+  Ember's Feedback:
+  - Great job!! :D
+  - I am not sure what the differences are off the top of my head, but -
+    you might have gotten away with using a for in loop instead of a for of -
+    loop over Object.keys()
+    For in loops already loop over the properties of an object
+*/
+// Alternative Solution
+function solution(number) {
+  if (number < 1 || number > 3999) {
+    return "Number out of range (1-3999)";
+  }
+
+  const romanNumerals = [
+    { value: 1000, numeral: "M" },
+    { value: 900, numeral: "CM" },
+    { value: 500, numeral: "D" },
+    { value: 400, numeral: "CD" },
+    { value: 100, numeral: "C" },
+    { value: 90, numeral: "XC" },
+    { value: 50, numeral: "L" },
+    { value: 40, numeral: "XL" },
+    { value: 10, numeral: "X" },
+    { value: 9, numeral: "IX" },
+    { value: 5, numeral: "V" },
+    { value: 4, numeral: "IV" },
+    { value: 1, numeral: "I" }
+  ];
+
+  let result = '';
+
+  for (const numeral of romanNumerals) {
+    while (number >= numeral.value) {
+      result += numeral.numeral;
+      number -= numeral.value;
+    }
+  }
+
+  return result;
+}
