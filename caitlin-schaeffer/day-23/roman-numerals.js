@@ -1,16 +1,16 @@
 /*
-Instructions: 
-Create a function taking a positive integer between 1 and 3999 (both included) as its parameter 
+Instructions:
+Create a function taking a positive integer between 1 and 3999 (both included) as its parameter
 and returning a string containing the Roman Numeral representation of that integer.
 Modern Roman numerals are written by expressing each digit separately starting with the
-leftmost digit and skipping any digit with a value of zero. There cannot be more than 3 identical 
+leftmost digit and skipping any digit with a value of zero. There cannot be more than 3 identical
 symbols in a row.
 Examples: 1990 is rendered: 1000=M + 900=CM + 90=XC; resulting in MCMXC.
 1666 --> "MDCLXVI"
 Params: given integer
 Return: string value of integer
 Note: If the number is between 900 and 1000, it is the 1 unit minus the 10 unit, if the number is between 500 and 900, it is the 5 unit plus the 1 unit
-Solution: basically just needed to add all of the numerals that can't be easily added up and assign their values then adjust the result with the keys 
+Solution: basically just needed to add all of the numerals that can't be easily added up and assign their values then adjust the result with the keys
 
 Given Code:
 function solution(number){
@@ -45,7 +45,7 @@ function solution(number) {
     }
     //this makes sure the result is a string
     let result = '';
-    
+
     //this loop iterates through the numerals (object above) and constructs the Roman numeral representation from those options
     for (let key in numerals) {
         while (number >= numerals[key]) {
@@ -57,8 +57,43 @@ function solution(number) {
     return result;
 }
 
+/*
+    Ember's Feedback:
+    - You did so well!!!
+*/
+// Alternative Solution
+function solution(number) {
+    if (number < 1 || number > 3999) {
+        return "Number out of range (1-3999)";
+    }
 
+    const romanNumerals = [
+        { value: 1000, numeral: "M" },
+        { value: 900, numeral: "CM" },
+        { value: 500, numeral: "D" },
+        { value: 400, numeral: "CD" },
+        { value: 100, numeral: "C" },
+        { value: 90, numeral: "XC" },
+        { value: 50, numeral: "L" },
+        { value: 40, numeral: "XL" },
+        { value: 10, numeral: "X" },
+        { value: 9, numeral: "IX" },
+        { value: 5, numeral: "V" },
+        { value: 4, numeral: "IV" },
+        { value: 1, numeral: "I" }
+    ];
 
+    let result = '';
+
+    for (const numeral of romanNumerals) {
+        while (number >= numeral.value) {
+            result += numeral.numeral;
+            number -= numeral.value;
+        }
+    }
+
+    return result;
+}
 
 
 /*
@@ -89,7 +124,7 @@ function solution(number){
      if (dCount > 0) {
         dCount = 'D'.repeat(dCount)
     } else if (dCount > 3) {
-        false 
+        false
     } else if (dCount === 0) {
         dCount = ""
     }
@@ -111,7 +146,7 @@ function solution(number){
      if (lCount > 0) {
         lCount = 'L'.repeat(mCount)
     } else if (lCount > 3) {
-        false 
+        false
     } else if (lCount === 0) {
         lCount = ""
     }
@@ -122,7 +157,7 @@ function solution(number){
      if (xCount > 0) {
         xCount = 'X'.repeat(xCount)
     } else if (xCount > 3) {
-        false 
+        false
     } else if (xCount === 0) {
         xCount = ""
     }
@@ -147,10 +182,10 @@ function solution(number){
         iCount = 'IV'
     } else if (iCount === 0) {
         iCount = ""
-    } 
+    }
   console.log(iCount)
-    
-    
+
+
     while (number > 0) {
         number = number - numerals.m
   }
