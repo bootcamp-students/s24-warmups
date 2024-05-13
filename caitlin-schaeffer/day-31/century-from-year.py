@@ -3,7 +3,7 @@
 # Params: given integer
 # Return: return integer
 # Concerns: none
-# Solution: 
+# Solution: simply divide the year by 100 and use math ceil to round the number up to it's nearest integer
 
 # Given Code: 
 # def century(year):
@@ -12,6 +12,7 @@
 
 
 
+import math
+
 def century(year):
-    # Finish this :)
-    return
+    return math.ceil(year/100)
