@@ -6,11 +6,8 @@
 
 
 def get_size(length, width, height):
-    # Calculate surface area
     area = 2 * (length * width + length * height + width * height)
     
-    # Calculate volume
     volume = length * width * height
     
-    # Return the result as an array
     return [area, volume]
