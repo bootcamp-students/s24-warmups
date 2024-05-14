@@ -1,14 +1,14 @@
 def array_plus_array(arr1,arr2):
     total_sum = 0
-    
+
     for number in arr1:
         total_sum += number
-        
+
     for number in arr2:
         total_sum += number
-        
+
     return total_sum
-    
+
 # two arrays of integers
 
 # return the sum of all numbers in integer form
@@ -20,3 +20,14 @@ def array_plus_array(arr1,arr2):
 # Have a total sum, loop through both arrays and for each integer add it to the current sum, then return the sum
 
 # I can do this
+
+"""
+    Ember's Feedback:
+    - Great job!!
+    - in python, you are actually able to concatenate arrays with the plus sign
+"""
+
+
+# Alternative Solution
+def array_plus_array(arr1, arr2):
+    return sum(arr1 + arr2)
