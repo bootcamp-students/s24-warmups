@@ -5,11 +5,15 @@
 -- ceo
 -- motto
 -- employees
+-- Return: table with all cols, sorted by number of employees in descending order
+-- Concerns: getting order to descend 
 
--- Examples: 
--- Params: 
--- Return: 
--- Concerns: 
 -- Solution: 
 
--- Given Code: 
+Select
+  id, ceo, motto, employees
+FROM
+Companies
+ORDER BY
+  employees DESC;
+
