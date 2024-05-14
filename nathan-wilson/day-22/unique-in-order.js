@@ -32,6 +32,9 @@ var uniqueInOrder = function (iterable) {
 function uniqueInOrder(iterable) {
   return Array.prototype.filter.call(iterable, (value, index, array) => value !== array[index - 1]);
 }
+
+
+
 var uniqueInOrder = function (iterable) {
   // I need to handle mixed input
   switch (typeof iterable) {
