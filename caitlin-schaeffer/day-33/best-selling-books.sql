@@ -5,10 +5,9 @@ books table schema
 -name
 -author
 -copies_sold
-Example: 
-Params: 
-Return: 
-Solution: 
+Params: given table
+Return: table with only top 5 sold books
+Solution: use order by and DESC Limit
 */
 
 Select 
