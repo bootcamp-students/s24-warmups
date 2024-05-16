@@ -1,26 +1,23 @@
 import re
 
+
 def calculate(s):
-    print(s)
-    
     numbers = re.split('plus|minus', s)
 
     operators = re.split("\d+", s)
     operators.pop(0)
     operators.pop(-1)
     final_sum = int(numbers[0])
-    
-    print(operators)
-    print(numbers)
+
     for number in range(len(operators)):
         iterator = int(number)
-        print(iterator)
         if operators[iterator] == "plus":
             final_sum += int(numbers[iterator + 1])
         else:
             final_sum -= int(numbers[iterator + 1])
-        
+
     return str(final_sum)
+
 
 # A string
 
@@ -36,3 +33,20 @@ def calculate(s):
 # return the solution
 
 # I can do this
+
+"""
+    Ember's Feedback:
+    - Good job!
+    - I was trying to figure out a way to structure the regex so that the operators array
+        doesn't have an empty space as the first and last elements, but no luck.
+"""
+
+
+# Alternative Solution
+def calculate(s):
+    s = s.replace("minus", " -")
+    s = s.replace("plus", " ")
+    s = s.split(" ")
+    s = map(int, s)
+    s = sum(s)
+    return str(s)
