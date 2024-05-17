@@ -1,4 +1,4 @@
-def array_plus_array(arr1,arr2):
+def array_plus_array(arr1, arr2):
     sum_one = 0
     sum_two = 0
     for i in arr1:
@@ -7,6 +7,18 @@ def array_plus_array(arr1,arr2):
         sum_two += j
     return sum_one + sum_two
 
-#initialize sum variables for each array
-#loop over each array adding each element to sum
-#add the two sums together
+
+# initialize sum variables for each array
+# loop over each array adding each element to sum
+# add the two sums together
+
+"""
+    Ember's Feedback:
+    - Good job!
+    - This is actually much easier syntactically in Python
+"""
+
+
+# Alternative Solution
+def array_plus_array(arr1, arr2):
+    return sum(arr1 + arr2)
