@@ -11,3 +11,8 @@ class Greet extends React.Component {
     );
   }
 }
+/*
+  Ember's Feedback:
+  - Great job!
+  - Insha'allah you never need to touch react class components
+*/

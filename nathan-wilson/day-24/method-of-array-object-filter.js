@@ -34,6 +34,34 @@ function countGrade(scores) {
 
 // ([50,60,70,80,90,100]) , {S:1, A:1, B:1, C:2, D:1, X:0}
 
-// I could return the wrong data type, I could make it very inneficient
+// I could return the wrong data type, I could make it very inefficient
 
-// Take the scores, map through them and filter the correct ones into the right key value paes
+// Take the scores, map through them and filter the correct ones into the right key value pairs
+/*
+  Ember's Feedback:
+  - Great job!!
+  - Refactor below
+*/
+// Refactor
+function countGrade(scores) {
+  return {
+    S: scores.filter((score) => score === 100).length,
+    A: scores.filter((score) => score < 100 && score >= 90).length,
+    B: scores.filter((score) => score < 90 && score >= 80).length,
+    C: scores.filter((score) => score < 80 && score >= 60).length,
+    D: scores.filter((score) => score < 60 && score >= 0).length,
+    X: scores.filter((score) => score === -1).length,
+  };
+}
+// Alternative Solution
+function countGrade(scores) {
+  let filterScores = (high, low) => scores.filter(score => score < high && score >= low).length
+  return {
+      S: filterScores(101, 100),
+      A: filterScores(100, 90),
+      B: filterScores(90, 80),
+      C: filterScores(80, 60),
+      D: filterScores(60, 0),
+      X: filterScores(0, -1),
+  }
+}

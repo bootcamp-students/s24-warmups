@@ -33,3 +33,30 @@ function dnaStrand(dna) {
 // letter to a new array. Join and return that final array
 
 // I just need to take it slow. Im 100% sure I can do this.
+
+/*
+  Ember's Feedback:
+  - Nice! Good job, good use of .map
+*/
+// Alternative Solution
+function dnaStrand(dna) {
+  let dnaOpposites = {
+    A: 'T',
+    T: 'A',
+    G: 'C',
+    C: 'G'
+  }
+  return dna.split('').map(letter => dnaOpposites[letter]).join('');
+}
+
+function DNAStrand(dna) {
+  let dnaRelationships = new Map([
+    ['A', 'T'],
+    ['T', 'A'],
+    ['C', 'G'],
+    ['G', 'C']
+  ])
+  return Array.prototype.map.call(dna, letter => dnaRelationships.get(letter) ?? '').join('')
+}
+// because strings are "array like" you can call array methods on them in this
+// way using .call

@@ -20,7 +20,23 @@ function humanReadable(seconds) {
 
 // if less than 60 just return that number in the seconds spot
 // if greater than 60 but less than 3600 do seconds mod 60 add the remainder as seconds and then
-// devide seconds by 60 and put that number in minutes
+// divide seconds by 60 and put that number in minutes
 // if above 3600 do the same for hours up until less than 360000
 
-// This is a little tricky, if i dont overcomplicate it I should be fine!
+// This is a little tricky, if i don't overcomplicate it I should be fine!
+
+/*
+  Ember's Feedback:
+  - Awesome job!
+*/
+// Alternative Solution
+function humanReadable(seconds) {
+  // greater than or equal to 24 hours
+  if (seconds >= 86400) {
+    let numberOfDays = Math.floor(seconds / 86400);
+    let hourMinSec = new Date((seconds % 86400) * 1000).toLocaleTimeString('en-GB'); // 'en-GB' returns hh:mm:ss
+    return (numberOfDays * 24) + parseInt(hourMinSec.slice(0, 2)) + hourMinSec.slice(2)
+  } else {
+    return new Date(seconds * 1000).toLocaleTimeString('en-GB');
+  }
+}

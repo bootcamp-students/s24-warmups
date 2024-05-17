@@ -19,8 +19,16 @@
 		"prefix": "ef",
 		"body": ["/*", "\tEmber's Feedback:","\t- $0","*/"],
 	},
+	"Feedback Comment Python": {
+		"prefix": "ef",
+		"body": ["\"\"\"", "\tEmber's Feedback:","\t- $0","\"\"\""],
+	},
 	"Alternative Solution Comment": {
 		"prefix": "asc",
 		"body": ["// Alternative Solution", "$0"]
+	},
+	"Alternative Solution Comment PY": {
+		"prefix": "asc",
+		"body": ["# Alternative Solution", "$0"]
 	}
 }

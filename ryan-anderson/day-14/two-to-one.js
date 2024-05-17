@@ -13,3 +13,28 @@ function longest(s1, s2) {
 // array containing all letters as strings
 // for loop iterating over each letter
 // if either string includes letter, add it to output string
+
+/*
+  Ember's Feedback:
+  - Interesting approach!
+  - Good job
+*/
+// Alternative Solution
+function longest(s1, s2) {
+  return Array.from(new Set(s1 + s2)).sort().join('');
+}
+
+function longest(s1, s2) {
+  let newStr = s1.concat(s2);
+  let newArr = newStr.split("");
+  let resultArr = [];
+  const addUniqueValuesToArray = (accumulator, currentValue) => {
+    if (!accumulator.includes(currentValue)) {
+      accumulator.push(currentValue)
+    }
+    return accumulator
+  }
+  newArr.reduce(addUniqueValuesToArray, resultArr)
+  let resultStr = resultArr.sort().join("");
+  return resultStr;
+}
