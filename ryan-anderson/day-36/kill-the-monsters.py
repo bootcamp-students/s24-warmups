@@ -8,3 +8,8 @@ def kill_monsters(health, monsters, damage):
         return 'hero died'
     else:
         return (f'hits: {hits}, damage: {hits * damage}, health: {health - damage_taken}')
+    
+    # divide monsters by 3 to count number of hits
+    # if monsters are a multiple of 3, subtract 1 from hits since Saitama won't be hit if all monsters are defeated
+    # total damage = hits tims damage per hit
+    # return f string counting total hits, total damage and remaining health
