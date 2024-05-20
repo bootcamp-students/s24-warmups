@@ -9,11 +9,11 @@ number2
 Return: table with columns abs and log
 Concerns: converting data into new column and rounding off decimals , need to use a function called log? log(2.0, 64.0)
 log returns a numeric with 	logarithm to base b
-Solution: 
+Solution: using abs and log
 */
 
 SELECT
     Abs(number1) AS abs,
-    log(number2, 64) AS log
+    log(64, number2) AS log
 FROM
     Decimals
