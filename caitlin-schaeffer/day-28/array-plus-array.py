@@ -4,9 +4,9 @@
 # Params: given arrays
 # Return: integer
 # Concerns: none
-# Solution: sum each array and then add those sums together 
+# Solution: sum each array and then add those sums together
 
-# Given Code: 
+# Given Code:
 # def array_plus_array(arr1,arr2):
 #     pass
 
@@ -20,6 +20,13 @@ def array_plus_array(arr1,arr2):
     answer1 = sum(arr1)
     answer2 = sum(arr2)
     answer = answer1 + answer2
-    
-    print(answer)
     return answer
+"""
+    Ember's Feedback:
+    - good work!
+"""
+
+
+# Alternative Solution
+def array_plus_array(arr1, arr2):
+    sum(arr1 + arr2)
