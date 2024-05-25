@@ -4,6 +4,7 @@
 # for each 10 add a dime, subtract 10 from cents, etc.
 # return list
 
+
 def coin_combo(cents):
     coins = [0, 0, 0, 0]
     while cents > 0:
@@ -20,3 +21,19 @@ def coin_combo(cents):
             coins[0] += 1
             cents -= 1
     return coins
+
+
+"""
+    Ember's Feedback:
+    - rename file to use snake case
+    - great work! :D
+"""
+
+
+# Alternative Solution
+def coin_combo(cents):
+    quarters = cents // 25
+    dimes = cents % 25 // 10
+    nickels = cents % 10 // 5
+    pennies = cents % 5
+    return [pennies, nickels, dimes, quarters]
