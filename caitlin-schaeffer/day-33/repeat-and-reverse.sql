@@ -16,3 +16,8 @@ SELECT
     Reverse(Characteristics) As Characteristics
 From
   Monsters;
+
+/*
+  Ember's Feedback:
+  - Great job!
+*/
