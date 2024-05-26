@@ -1,24 +1,9 @@
--- Type your query here
--- SELECT * FROM students
+SELECT *
+FROM students
+WHERE IsActive = 1
 
--- CREATE TABLE Students_New (
---     id INTEGER, 
---     FirstName TEXT,
---     LastName TEXT,
---     IsActive BOOLEAN
--- );
-
--- INSERT INTO 
---   Students_New (FirstName, LastName, IsActive)
--- SELECT 
---   FirstName, LastName, IsActive
--- FROM
---   Students;
-
--- ALTER TABLE Students
--- ADD COLUMN IsActive BOOLEAN DEFAULT TRUE;
-  
-  SELECT * FROM 
-    students 
-  WHERE 
-    IsActive = 1
+/*
+  Ember's Feedback:
+  - Great work!
+  - because TRUE is 1 in PostreSQL, you can actually write WHERE IsActive; and it is the same thing
+*/
