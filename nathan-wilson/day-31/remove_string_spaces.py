@@ -1,6 +1,6 @@
 def no_space(x):
     return x.replace(" ", "")
-    
+
 # a string
 
 # a string with no spaces
@@ -12,3 +12,20 @@ def no_space(x):
 # take the string and replace all spaces with nothing
 
 # I can do this
+
+"""
+    Ember's Feedback:
+    - Great work :D
+    - similar to JS
+"""
+
+
+# Alternative Solution
+def no_space(x):
+    return "".join(x.split())
+
+
+def no_space(x):
+    import re
+
+    return re.sub("\s*", "", x)
