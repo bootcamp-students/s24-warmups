@@ -4,9 +4,9 @@
 # replace plus > +
 # replace minus > -
 # if plus in s
-# if minus in s 
+# if minus in s
 
-# .split 
+# .split
 
 # iterate over list
 #     if isnumeric() then current_num
@@ -15,7 +15,7 @@
 
 #     if current op +
 #         then acc + current_num
-#     else if current_0p - 
+#     else if current_0p -
 #         then acc - current_num
 
 
@@ -35,5 +35,33 @@ def calculate(s):
                 acc = acc - current_number
         else:
             current_op = a
-        
+
     return str(acc)
+
+
+"""
+    Ember's Feedback:
+    - Make file name snake_case
+    - Great job :D Thank you for not using eval lol
+"""
+
+
+# Alternative Solution
+def calculate(s):
+    s = s.replace("minus", " -")
+    s = s.replace("plus", " ")
+    s = s.split()
+    s = map(int, s)
+    s = sum(s)
+    return str(s)
+
+
+# OR
+def calculate(s):
+    return str(sum(map(int, s.replace("minus", " -").replace("plus", " ").split())))
+
+
+def calculate(s):
+    return str(
+        sum(int(num) for num in s.replace("minus", " -").replace("plus", " ").split())
+    )

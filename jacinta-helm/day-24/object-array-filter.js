@@ -28,7 +28,10 @@ function countGrade(scores){
     ]
     console.log(grades)
     
-    const filterGrades = grades.filter(grade => grade.score)
-      
-    
+    let filteredGrades = grades.filter(grade => {
+        let condition = grade.score.replace('x', score);
+        return eval(condition);
+    });
+    return filteredGrades.map(grade => grade.letter)
+ 
   }
