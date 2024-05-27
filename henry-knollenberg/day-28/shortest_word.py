@@ -8,10 +8,10 @@
 # return shortestWordLength
 
 def find_short(s):
-    listWords = s.split()
-    shortestWordLength = len(listWords[0])
+    list_words = s.split()
+    shortest_word_length = len(list_words[0])
     
-    for x in listWords:
-        if len(x) < shortestWordLength:
-            shortestWordLength = len(x)
-    return shortestWordLength 
+    for x in list_words:
+        if len(x) < shortest_word_length:
+            shortest_word_length = len(x)
+    return shortest_word_length 
