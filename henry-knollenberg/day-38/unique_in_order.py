@@ -5,10 +5,10 @@
 # return list
 
 def unique_in_order(sequence):
-    justseen = ""
+    just_seen = ""
     lst = []
     for s in sequence:
-        if not s == justseen:
+        if not s == just_seen:
             lst.append(s)
-        justseen = s
+        just_seen = s
     return lst
