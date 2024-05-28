@@ -12,6 +12,18 @@ def get_size(w,h,d):
 
 # I could have a type error or a math error
 
-# Make an empty array, seperately do each calculation and append them to the array
+# Make an empty array, separately do each calculation and append them to the array
 
 # I can do this!
+
+"""
+    Ember's Feedback:
+    - Great job!!
+"""
+
+
+# Alternative Solution
+def get_size(w, h, d):
+    area = 2 * (w * h + h * d + w * d)
+    volume = w * h * d
+    return [area, volume]
