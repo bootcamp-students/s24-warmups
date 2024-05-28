@@ -6,7 +6,7 @@ def kill_monsters(health, monsters, damage):
     if final_health <= 0:
         return "hero died"
     else:
-        return f"hits: {final_hits}, damage: {final_damage}, health: {final_health}" # TODO
+        return f"hits: {final_hits}, damage: {final_damage}, health: {final_health}"
 
 # i need to return a string in the format "hits: #, damage: #, health: #"
 # or "hero died"
