@@ -1,11 +1,11 @@
 let getParenPermutationList = (parenNumber) => {
 
-    let parenPermuatationList = [];
+    let parenPermutationList = [];
 
     for (let left = 0; left <= parenNumber; left++) {
         let right = parenNumber - left;
         console.log(left, right)
-        parenPermuatationList.push(makeParenStrings(left, right))
+        parenPermutationList.push(makeParenStrings(left, right))
     }
 
     function makeParenStrings(left, right) {
@@ -14,7 +14,7 @@ let getParenPermutationList = (parenNumber) => {
         return openParen.repeat(left) + closeParen.repeat(left) + openParen.repeat(right) + closeParen.repeat(right)
     }
 
-    return parenPermuatationList;
+    return parenPermutationList;
   }
   console.log(getParenPermutationList(5))
 
