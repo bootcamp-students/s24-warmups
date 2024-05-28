@@ -25,3 +25,15 @@ var maxSequence = function(arr){
 var maxSequence = function(arr){
     // ...
   }
+
+  /*
+  Maddie checked for 0 first
+
+  she used math.max to compare sums
+
+  then compared max sum to current sum and whichever is larger becomes current sum
+
+  lat maxSum = -1000000000000
+  let curSum = 0
+  
+  */
