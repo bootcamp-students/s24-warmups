@@ -55,16 +55,29 @@ let getParenPermutationList = (parenNumber) => {
     balancedParens(0) => [""]
     balancedParens(1) => ["()"] // 1
     balancedParens(2) => ["()()","(())"] // 2
-    balancedParens(3) => ["()()()","(())()","()(())","(()())","((()))"] // 5
+    balancedParens(3) => ["()()()", "(()())", "(())()","()(())","((()))"] // 5
     balancedParens(4) => ["(((())))","((()()))","((())())","((()))()","(()(()))","(()()())","(()())()","(())(())","(())()()","()((()))","()(()())","()(())()","()()(())","()()()()"] // 14
 */
 
 
-  /*
-    factorial is product of a range 5! == 120
+/*
+"(((())))" 4 deep 0 breaks or 3 deep + 1 wrap
+"((()))()" 3 deep + 1 right
+"()((()))" 3 deep + 1 left
 
-    Gaussian summation is the sum of a range  5 gs = 15
-    // 5
+"((()()))"  (()()) + 1 wrap
+"(()())()"  (()()) + 1 right
+"()(()())"  (()()) + 1 left
+
+"((())())"
+*/
+
+
+    // factorial is product of a range 5! == 120
+
+    // Gaussian summation is the sum of a range  5 gs = 15
+   /*
+   // 5
     5 + 0
 
     4 + 1
@@ -88,14 +101,19 @@ let getParenPermutationList = (parenNumber) => {
 
     1 + 1 + 1 + 1 + 1
     // 15 perms
-
+  */
+ /*
     // 4
     4 + 0
     3 + 1
     1 + 3
+
     1 + 2 + 1
     2 + 1 + 1
     1 + 1 + 2
+
+    2 + 2
+
     1 + 1 + 1 + 1
     // 7 perms
 
@@ -109,6 +127,7 @@ let getParenPermutationList = (parenNumber) => {
     // 2
     2 + 0
     1 + 1
+    0 + 2
     // 2 perm
 
     // 1
