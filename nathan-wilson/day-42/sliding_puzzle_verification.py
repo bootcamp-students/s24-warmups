@@ -1,11 +1,9 @@
 def is_solved(board):
-    print("the board: ", board)
     outer_array = []
     for array in board:
         for element in array:
             outer_array.append(element)
-        
-    print("outer array: ", outer_array)
+
     if outer_array == sorted(outer_array):
         return True
     

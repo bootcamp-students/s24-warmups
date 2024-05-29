@@ -6,7 +6,6 @@ function nbMonths(
 ) {
   let oldCarPrice = startPriceOld;
   let newCarPrice = startPriceNew;
-  let perentLoss = percentLossByMonth;
   let differenceInPrice = newCarPrice - oldCarPrice;
   let deprecationPercentage = 1 - percentLossByMonth / 100;
   let savings = 0;
@@ -20,7 +19,6 @@ function nbMonths(
     if (monthsPast % 2 === 0) {
       deprecationPercentage -= 0.005;
     }
-    console.log(deprecationPercentage);
     savings += savingperMonth;
     oldCarPrice *= deprecationPercentage;
     newCarPrice *= deprecationPercentage;
