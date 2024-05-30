@@ -9,7 +9,7 @@ function nbMonths(
   let differenceInPrice = newCarPrice - oldCarPrice;
   let deprecationPercentage = 1 - percentLossByMonth / 100;
   let savings = 0;
-  let monthsPast = 1;
+  let monthsPast = 0;
 
   if (oldCarPrice >= newCarPrice) {
     return [0, oldCarPrice - newCarPrice];
@@ -46,3 +46,4 @@ function nbMonths(
 // it took and the amount left over.
 
 // theres a lot of steps but if i console log a lot ill get it done!
+
