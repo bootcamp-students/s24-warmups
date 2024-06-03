@@ -9,6 +9,26 @@ Positive self talk- Keep your face to the sunshine and you cannot see a shadow. 
 
 import math
 
+
 def century(year):
-    print(year/100)
     return math.ceil(year/100)
+
+
+"""
+    Ember's Feedback:
+    - Great job :D
+    - 🌻
+"""
+
+
+# Alternative Solutions
+def century(year):
+    return year // 100 + (1 if year % 100 != 0 else 0)
+
+
+def century(year):
+    return (year + 99) // 100
+
+
+def century(year):
+    return (year - 1) // 100 + 1

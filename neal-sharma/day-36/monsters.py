@@ -13,8 +13,6 @@ def kill_monsters(health, monsters, damage):
             hits += 1
             health -= damage
             total_damage += damage
-            print(hits)
-            print(health)
             
             
             if health <= 0:
