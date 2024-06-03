@@ -12,4 +12,3 @@ def create_phone_number(n):
 # Take the number and create a template literal for each number in order
 
 # I can do this
-

@@ -14,3 +14,33 @@ FROM monsters
 ORDER BY id;
 
 --POST KATA COMMENT: Apparently could be done easily with "split_part(characteristics, ',', 1) as characteristic" which wasn't mentioned in any of the linked documentation. >:(
+
+/*
+  Ember's Feedback:
+  - This works by brute forcing it but the moment the data in your DB changes, this fails.
+  - I linked how to find the location of specific characters in SQL, you didn't read :P
+  - split_part is easy and nice, and Jacinta found it easy enough using Google, a tool you also
+    have access to. That being said, you already had linked documentation for a solution to this problem.
+    Turn that frown upside down :P
+  - I chose to link documentation to make it easier on you all instead of -
+    watching you flounder like in cohorts past. You are welcome :)
+*/
+
+-- Alternative Solutions
+SELECT id,
+    name,
+    split_part(characteristics, ',', 1) as characteristic
+FROM monsters
+ORDER BY id;
+
+select id,
+  name,
+  case
+    when POSITION(',' IN characteristics) = 0 then characteristics
+    else left(
+      characteristics,
+      POSITION(',' IN characteristics) -1
+    )
+  end as characteristic
+FROM monsters
+order by id

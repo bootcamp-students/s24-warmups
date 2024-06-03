@@ -3,3 +3,8 @@ SELECT
     REVERSE(characteristics) AS characteristics
 FROM
     monsters;
+
+/*
+    Ember's Feedback:
+    - chef's kiss
+*/
