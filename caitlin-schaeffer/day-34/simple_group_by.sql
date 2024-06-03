@@ -1,5 +1,5 @@
 /*
-Instructions: For this challenge you need to create a simple GROUP BY statement, you want to group all the people by 
+Instructions: For this challenge you need to create a simple GROUP BY statement, you want to group all the people by
 their age and count the people who have the same age.
 Params: given table:
 people table schema
@@ -19,3 +19,9 @@ FROM
     People
 GROUP BY
     age
+
+/*
+    Ember's Feedback:
+    - Good job!
+    - Group by is really powerful, you will see it again if you end up writing sql.
+*/

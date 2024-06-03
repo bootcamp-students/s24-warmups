@@ -6,10 +6,15 @@
 
 -- Solution: use the ASCII method and select specific column values to apply it to
 
-Select 
+Select
     Demographics.id AS id,
     ASCII(Demographics.name) AS name,
     Demographics.birthday AS birthday,
     ASCII(Demographics.race) AS race
 FROM
     Demographics
+
+/*
+    Ember's Feedback:
+    - Great work!
+*/

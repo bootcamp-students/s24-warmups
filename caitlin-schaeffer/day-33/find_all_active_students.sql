@@ -20,3 +20,9 @@ FROM
     Students
 WHERE
     IsActive = 1
+
+/*
+    Ember's Feedback:
+    - Great work!
+    - you can actually get away with writing WHERE IsActive; because 1 is true and 0 is false
+*/
