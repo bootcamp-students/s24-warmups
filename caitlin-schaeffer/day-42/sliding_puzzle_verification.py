@@ -12,16 +12,13 @@
 # Given code:
 # def is_solved(board):
 
-# henry:
-# def is_solved(board):
-#     previous_value = board[0][0]
-#     for first_level in board:
-#         for second_level in board:
-#             if second_level < previous_value:
-#                 return False
-#             else:
-#                 previous_value = second_level
-#     return True
+#basically you just need to compare the values!
 
-# could get rid of one of the for loops by doing a .every 
-
+def is_solved(board):
+    track_value = []
+    for level in board:
+        if level < track_value:
+            return False
+        else:
+            track_value = level
+    return True

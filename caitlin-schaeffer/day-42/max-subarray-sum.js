@@ -20,20 +20,26 @@ var maxSequence = function(arr){
 // You basically want to remove negative values but not really because you need to respect the order
 // The positive numbers are valid subsequences 
 
-//henry was basically just comparing the accumulator
+/*
+Kadane's Algorithm: https://en.wikipedia.org/wiki/Maximum_subarray_problem#Kadane's_algorithm
+*/
 
 var maxSequence = function(arr){
-    // ...
+    //establish current sum and keep track, this is basically tracking the subarray sum
+    let currentSum = 0
+    //look at max sum, which is basically in tandem with currentSum
+    let maxSum = 0
+
+    //this for loop will add the currentNum to the currentSum for each iteration
+    for(let i =0; i < arr.length; i++){
+      //pull current number as the index i of the array
+      let currentNum = arr[i]
+
+      //factor that into currentSum
+      currentSum = Math.max((currentSum + currentNum), 0)
+
+      //adjust maxSum
+      maxSum = Math.max(currentSum, maxSum)
+    }
+    return maxSum
   }
-
-  /*
-  Maddie checked for 0 first
-
-  she used math.max to compare sums
-
-  then compared max sum to current sum and whichever is larger becomes current sum
-
-  lat maxSum = -1000000000000
-  let curSum = 0
-  
-  */
