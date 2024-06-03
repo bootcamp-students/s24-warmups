@@ -8,7 +8,6 @@ def kill_monsters(health, monsters, damage):
     total_damage= 0
     while monsters > 0:
         monsters -= 3 # if monsters is greater than 0 kill off the first 3.
-        print(monsters)
             
         if monsters > 0: # if after killing the 3 monsters take a hit and subtract the damage from health and add damage
             hits += 1
