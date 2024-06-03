@@ -1,6 +1,14 @@
-select
-id,
-name
+select id,
+    name
 from departments
-where exists
-(select price from sales where department_id=departments.id and price > 98)
+where exists (
+        select price
+        from sales
+        where department_id = departments.id
+            and price > 98
+    )
+
+/*
+    Ember's Feedback:
+    - Great work :D
+*/
