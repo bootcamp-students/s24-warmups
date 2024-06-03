@@ -17,7 +17,7 @@ function findUniq(arr) {
         return false
       }
     }
-    
+
     //all middle elements are handled below
     if (arr.indexOf(element, index + 1) === -1 && arr.lastIndexOf(element, index - 1) === -1) {
       return true
@@ -25,7 +25,27 @@ function findUniq(arr) {
       return false
     }
   })
-  
+
   //the resulting array should contain only one element, the unique number, which we return
   return unique[0]
+}
+/*
+  Ember's Feedback:
+  - Great job!
+  - Bonus content :D
+*/
+// Alternative Solution
+function findUniq(arr) {
+  let uniqueNum = {};
+
+  // count the occurrences of each number in the array
+  for (let current of arr) {
+    uniqueNum[current] = (uniqueNum[current] || 0) + 1;
+  }
+  // find the unique number in the array
+  for (let current of arr) {
+    if (uniqueNum[current] === 1) {
+      return current
+    }
+  }
 }
