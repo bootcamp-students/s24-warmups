@@ -3,3 +3,8 @@
 
 SELECT id, ASCII(name) AS name, birthday, ASCII(race) AS race
 FROM demographics;
+
+/*
+    Ember's Feedback:
+    - Excellent work and understanding of ASCII :D
+*/
