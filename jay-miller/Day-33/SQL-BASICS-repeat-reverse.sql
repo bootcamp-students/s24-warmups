@@ -1,5 +1,11 @@
-SELECT 
+SELECT
     REPEAT(name, 3) AS name,
     REVERSE(characteristics) AS characteristics
-FROM 
+FROM
     monsters;
+
+/*
+    Ember's Feedback:
+    - Good job!
+    - snake case file name
+*/
