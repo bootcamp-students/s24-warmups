@@ -1,7 +1,7 @@
 function nbMonths(
   startPriceOld,
   startPriceNew,
-  savingperMonth,
+  savingPerMonth,
   percentLossByMonth
 ) {
   let oldCarPrice = startPriceOld;
@@ -19,7 +19,7 @@ function nbMonths(
     if (monthsPast % 2 === 0) {
       deprecationPercentage -= 0.005;
     }
-    savings += savingperMonth;
+    savings += savingPerMonth;
     oldCarPrice *= deprecationPercentage;
     newCarPrice *= deprecationPercentage;
     differenceInPrice = newCarPrice - oldCarPrice;
@@ -47,3 +47,7 @@ function nbMonths(
 
 // theres a lot of steps but if i console log a lot ill get it done!
 
+/*
+  Ember's Feedback:
+  - This doesn't work when I put this into Codewars, it is returning the wrong values.
+*/

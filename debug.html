@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Debug</title>
+  </head>
+  <body>
+    <h1>Debugger</h1>
+    <p>
+      Import the file you want to test into this file using a script tag, then
+      open it in your browser.
+    </p>
+    <p>
+      Alternativley, you can simply paste your code into a script tag below.
+    </p>
+    <p>
+      By including <code>debugger;</code> in your script you can walk through
+      the execution of your kata code to test it. This will occur in the
+      devtools.
+    </p>
+    <script>
+      // paste your kata code below
+      function nbMonths(
+        startPriceOld,
+        startPriceNew,
+        savingperMonth,
+        percentLossByMonth
+      ) {
+        let oldCarPrice = startPriceOld;
+        let newCarPrice = startPriceNew;
+        let differenceInPrice = newCarPrice - oldCarPrice;
+        let deprecationPercentage = 1 - percentLossByMonth / 100;
+        let savings = 0;
+        let monthsPast = 0;
+
+        if (oldCarPrice >= newCarPrice) {
+          return [0, oldCarPrice - newCarPrice];
+        }
+
+        while (oldCarPrice + savings < newCarPrice) {
+          if (monthsPast % 2 === 0) {
+            deprecationPercentage -= 0.005;
+          }
+          savings += savingperMonth;
+          oldCarPrice *= deprecationPercentage;
+          newCarPrice *= deprecationPercentage;
+          differenceInPrice = newCarPrice - oldCarPrice;
+          differenceInPrice -= savings;
+          monthsPast++;
+        }
+
+        return [monthsPast - 1, Math.round(Math.abs(differenceInPrice))];
+      }
+      // call the pasted kata function below
+      // use F9 to step into your code line by line in devtools
+      function kataCode(...inputs) {
+        debugger;
+        return nbMonths(...inputs);
+      }
+      // paste test code below
+      let testData = [
+        { inputs: [2000, 8000, 1000, 1.5], expectedReturnValue: [6, 766] },
+      ];
+      function testCode() {
+        for (const test of testData) {
+          let kataReturnValue = kataCode(...test.inputs);
+          if (kataReturnValue !== test.expectedReturnValue) {
+            let formattedReturnValues = test.expectedReturnValue;
+            if (Array.isArray(formattedReturnValues)) {
+              formattedReturnValues = `[${formattedReturnValues.join(", ")}]`;
+              kataReturnValue = `[${kataReturnValue.join(", ")}]`;
+            }
+            console.error(
+              `expected inputs (${test.inputs.join(
+                ", "
+              )}) to return ${formattedReturnValues} but got ${kataReturnValue} isntead`
+            );
+          } else {
+            console.log(
+              `returned correctly for ${test.inputs}, got ${kataReturnValue}`
+            );
+          }
+        }
+      }
+      testCode();
+    </script>
+  </body>
+</html>
