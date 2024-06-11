@@ -32,19 +32,20 @@ return true
 
 //the large test passes but the little test doesn't
 function scramble(str1, str2) {
-    let sorted1 = str1.split("")
-    console.log('SORT1: ', sorted1)
-    let sorted2 = str2.split("")
-    console.log('SORT2: ', sorted2)
-    let answer = sorted2.every(
-      (element) => {
-        return sorted1.includes(element)
-      }
-    )
-    console.log('ANSWER: ', answer)
-    return answer
-  }
+  let sorted1 = str1.split("");
+  let sorted2 = str2.split("");
+  let answer = sorted2.every((element) => {
+    return sorted1.includes(element);
+  });
+  return answer;
+}
 
+/*
+  Ember's Feedback:
+  - This isn't working
+  - The issue here is we want to check if the given letter in str2 appears >= the number of times in str1 as it did in str2.
+    As written, it stops at the first occurrence of th letter and returns true.
+*/
 
 /*
 old:
@@ -70,5 +71,3 @@ function scramble(str1, str2) {
     return answer
   }
 */
-
- 
