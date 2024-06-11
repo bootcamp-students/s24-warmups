@@ -7,7 +7,17 @@
 
 
 def create_phone_number(n):
-    digits = ''.join(map(str, n))
+    digits = "".join(map(str, n))
     n = f"({digits[:3]}) {digits[3:6]}-{digits[6:]}"
     return n
 
+
+"""
+    Ember's Feedback:
+    - Nice work! I like the syntax of getting a portion of the list :D
+"""
+
+
+# Alternative Solution
+def create_phone_number(n):
+    return "({}{}{}) {}{}{}-{}{}{}{}".format(*n)
