@@ -1,22 +1,19 @@
 function findUniq(arr) {
   const count = {};
-  for (let ele of arr){
-    if (count[ele]){
-      count[ele] +=1
-    }else{
-      count[ele] =1
+  for (let ele of arr) {
+    if (count[ele]) {
+      count[ele] += 1
+    } else {
+      count[ele] = 1
     }
   }
-  console.log(count)
-  
-  for (let key in count){
-    if (count[key] === 1){
-      console.log("key", key)
-      
+
+  for (let key in count) {
+    if (count[key] === 1) {
       return parseFloat(key)
     }
   }
-  
+
 }
 /*
 im given an array, i need to return the one unique number in the array.
@@ -33,3 +30,26 @@ i kept ending up with key being the number in quotes
 had to find parseInt, which eventually led me to parseFloat
 
 */
+
+/*
+  Ember's Feedback:
+  - Great job :D
+  - I believe for this you could get away with just using Number() instead of parseFloat,
+    which is more accurate to what you are doing in that you are casting it to number from string
+*/
+
+// Alternative Solution
+function findUniq(arr) {
+  let uniqueNum = {};
+
+  // count the occurrences of each number in the array
+  for (let current of arr) {
+    uniqueNum[current] = (uniqueNum[current] || 0) + 1;
+  }
+  // find the unique number in the array
+  for (let current of arr) {
+    if (uniqueNum[current] === 1) {
+      return current
+    }
+  }
+}

@@ -13,7 +13,19 @@
 # 	return smallest.length;
 # }
 
+
 def find_short(s):
     word = s.split()
-    short = min(word, key = len)
+    short = min(word, key=len)
     return len(short)
+
+
+"""
+    Ember's Feedback:
+    - file is not  snake_case, which is the convention for python files
+"""
+# Alternative Solution
+
+
+def find_short(s):
+    return min(map(len, s.split()))

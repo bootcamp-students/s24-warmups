@@ -35,3 +35,4 @@ function countGrade(scores){
     return filteredGrades.map(grade => grade.letter)
  
   }
+
