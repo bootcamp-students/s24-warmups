@@ -8,10 +8,16 @@
 # [ [2, 1],
 #   [0, 3] ]
 
-##concern - wrong method 
+##concern - wrong method
 ##Explain - I want to be able to iterate over random boards and determine if they
-##pass or fail.  
+##pass or fail.
 
 
 def is_solved(board):
-    return [cell for row in board for cell in row] == list(range(len(board)**2))
+    return [cell for row in board for cell in row] == list(range(len(board) ** 2))
+
+
+"""
+    Ember's Feedback:
+    - Good work! Very succinct
+"""
