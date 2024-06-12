@@ -14,3 +14,13 @@ function pigIt(str){
     //return words.join(" ");
   return str.replace(/(\w)(\w*)(\s|$)/g, "\$2\$1ay\$3")
 }
+/*
+  Ember's Feedback:
+  - Nice RegEx!
+*/
+// Alternative Solution
+function pigIt(str) {
+  // ReGex: matches any consecutive word characters, which excludes punctuation and empty space
+  return str.replaceAll(/\w+/g, (match) => match.slice(1) + match[0] + 'ay')
+}
+
