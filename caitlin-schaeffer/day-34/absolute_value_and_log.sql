@@ -1,5 +1,5 @@
 /*
-Instructions: Given a table, Return a table with two columns (abs, log) where the values in abs are the absolute values 
+Instructions: Given a table, Return a table with two columns (abs, log) where the values in abs are the absolute values
 of number1 and the values in log are values from number2 in logarithm to base 64.
 Params: given table:
 decimals table schema
@@ -17,3 +17,8 @@ SELECT
     log(64, number2) AS log
 FROM
     Decimals
+
+/*
+    Ember's Feedback:
+    - Great work!
+*/

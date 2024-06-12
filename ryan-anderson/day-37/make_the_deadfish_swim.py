@@ -20,6 +20,31 @@ def parse(data):
 # square value (^2)
 # output value
 
-    # split string to create a list to iterate over
-        #split didn't work, use list() instead
-    # for loop over list, performing action corresponding to each character
+# split string to create a list to iterate over
+# split didn't work, use list() instead
+# for loop over list, performing action corresponding to each character
+
+"""
+    Ember's Feedback:
+    - Great work! :D
+    - You can for-in loop over a string without it being a list
+"""
+
+
+# Alternative Solution
+def parse(data):
+    default_value = 0
+    return_array = []
+
+    for command in data:
+        match command:
+            case "i":
+                default_value += 1
+            case "d":
+                default_value -= 1
+            case "s":
+                default_value *= default_value
+            case "o":
+                return_array.append(default_value)
+
+    return return_array
