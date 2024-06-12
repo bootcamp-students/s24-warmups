@@ -1,9 +1,13 @@
-/*- do not include the commaa only take the one -*/
+/*- do not include the comma only take the one -*/
 /*  SQL  */
-SELECT
-  id,
+SELECT id,
   name,
   split_part(characteristics, ',', 1) as characteristic
-FROM
-  monsters
+FROM monsters
 ORDER BY id;
+
+/*
+  Ember's Feedback:
+  - Great work!
+  - split_part kind of works like .split() in JS
+*/
