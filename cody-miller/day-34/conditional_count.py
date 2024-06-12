@@ -1,4 +1,4 @@
-select 
+select
 extract(MONTH from payment_date) as month,
 count(payment_id) as total_count,
 sum(amount) as total_amount,
@@ -10,3 +10,8 @@ from payment
 GROUP BY month
 ORDER BY month;
 
+
+/*
+    Ember's Feedback:
+    - needs to be a sql file not a python file
+*/
