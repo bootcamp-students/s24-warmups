@@ -12,4 +12,3 @@ decodeMorse = function (morseCode) {
   }
   return finalArray.join(' ');
 };
-  //
