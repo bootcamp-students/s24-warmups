@@ -30,15 +30,25 @@ return true
 */
 //.every is an array method that takes a callback function (testing functions mean you're doing a check and returning a boolean)
 
-//the large test passes but the little test doesn't
 function scramble(str1, str2) {
-  let sorted1 = str1.split("");
-  let sorted2 = str2.split("");
-  let answer = sorted2.every((element) => {
-    return sorted1.includes(element);
-  });
-  return answer;
-}
+    let stringHolder = {}
+    for (let letter of str1){
+//      next line is checking to see if it exists, and the first if adds 1 to something that does exist
+      if (stringHolder[letter]){
+        stringHolder[letter] = stringHolder[letter] + 1
+      } else {
+        stringHolder[letter] = 1
+      }
+    }
+    for (let letter of str2){
+      if (stringHolder[letter]){
+        stringHolder[letter] = stringHolder[letter] - 1
+      } else {
+        return false
+      }
+    }
+  return true
+  }
 
 /*
   Ember's Feedback:
