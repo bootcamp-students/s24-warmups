@@ -1,2 +1,14 @@
+decodeMorse = function (morseCode) {
+  let splitCode = morseCode.trim().split('   ');
+  let finalArray = [];
 
-  // oh lol no no Morse code not morris code :P
+  for (let word of splitCode) {
+    let letters = word.split(' ');
+    let wordArray = [];
+    for (let letter of letters) {
+      wordArray.push(MORSE_CODE[letter]);
+    }
+    finalArray.push(wordArray.join(''));
+  }
+  return finalArray.join(' ');
+};
