@@ -1,5 +1,5 @@
 /*
-Instructions: For this challenge you need to create a SELECT statement that will contain data about departments that 
+Instructions: For this challenge you need to create a SELECT statement that will contain data about departments that
 had a sale with a price over 98.00 dollars. This SELECT statement will have to use an EXISTS to achieve the task.
 Params: given two tables:
 
@@ -21,7 +21,7 @@ resultant table schema
 id
 name
 Concerns: handling input from two tables that both have some of the same names
-Solution: select the two columns from the departments table and then use a WHERE EXIST that checks price and for the 
+Solution: select the two columns from the departments table and then use a WHERE EXIST that checks price and for the
 sale department id equaling the departments id
 */
 
@@ -33,3 +33,7 @@ FROM
 WHERE EXISTS
     (SELECT name FROM sales WHERE sales.department_id = departments.id  AND price > 98)
 
+/*
+    Ember's Feedback:
+    - Great work!
+*/

@@ -1,12 +1,9 @@
-/*  SQL  */
-
--- CREATE TABLE
---   Companies (
---     id INTEGER, 
---     ceo TEXT,
---     motto TEXT,
---     employees INTEGER
---   )
-
-SELECT * FROM companies
+SELECT *
+FROM companies
 ORDER BY employees DESC
+
+/*
+    Ember's Feedback:
+    - Great work!
+    - ORDER BY is one you will use often if not using an ORM
+*/
