@@ -8,7 +8,7 @@
 # Params: 2d array
 # Return: True or False
 # Concerns: multiple array board
-# Solution:
+# Solution: nested for loop
 # Given code:
 # def is_solved(board):
 
@@ -16,12 +16,13 @@
 
 
 def is_solved(board):
-    track_value = []
+    track_value = board[0][0]
     for level in board:
-        if level < track_value:
-            return False
-        else:
-            track_value = level
+        for value in level:
+            if value < track_value:
+                return False
+            else:
+                track_value = value
     return True
 
 
