@@ -21,3 +21,8 @@ def unique_in_order(sequence):
 # Example, ('ABBCcAD')== ['A', 'B', 'C', 'c', 'A', 'D']; [1, 2, 2, 3, 3])   == [1, 2, 3]
 # Concerns, I use the wrong method to complete this function 
 # explain-  create the first iterable so that i can have something to loop over for the starting point. the start the loop.
+
+"""
+    Ember's Feedback:
+    - Good job!
+"""
