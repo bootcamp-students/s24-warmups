@@ -1,20 +1,19 @@
 function scramble(str1, str2) {
-  console.log("Inputs: ", str1, str2);
-
-  let string1 = str1.split("");
-  console.log("string1: ", string1);
-
-  let string2 = str2.split("");
-  console.log("string2: ", string2);
-
-  let doesContain = string2.every((letter) => string1.includes(letter));
-  console.log("doesContain: ", doesContain);
-
-  if (doesContain) {
-    return true;
-  } else {
-    return false;
+  // Create a frequency count for characters in str1
+  let charCount = {};
+  for (let char of str1) {
+    charCount[char] = (charCount[char] || 0) + 1;
   }
+
+  // Check if str2 can be formed by characters in str1
+  for (let char of str2) {
+    if (!charCount[char]) {
+      return false;
+    }
+    charCount[char]--;
+  }
+
+  return true;
 }
 
 // Does str1 include str2?
