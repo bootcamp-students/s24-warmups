@@ -34,3 +34,29 @@ def parse(data):
             return_array.append(value)
 
     return return_array
+
+
+"""
+    Ember's Feedback:
+    - Good work!
+"""
+
+# Alternative Solution
+def parse(data):
+    value = 0
+    return_array = []
+    
+    for letter in data:
+        match letter:
+            case "i":
+                value += 1
+            case "d":
+                value -= 1
+            case "s":
+                value *= value
+            case "o": 
+                return_array.append(value)
+            case _: #ignore invalid characters
+                pass
+
+    return return_array
