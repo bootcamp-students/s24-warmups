@@ -24,6 +24,10 @@ if (bigValue  < 0) {
 }
 }
 
+/*
+  Ember's Feedback:
+  - go see the notes and refactor I gave to Henry
+*/
 
 // Parameters- number array 
 //Return- My function should return a number 

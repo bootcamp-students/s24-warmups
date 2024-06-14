@@ -15,3 +15,7 @@ def comp(array1, array2):
 #   using sorted will make sure that the order of the array doesn't get mixed up. using a try block with except to handle potential errors, if one occurs, 
 #   and creating a new list/array in array1 with the squared values. 
 
+"""
+    Ember's Feedback:
+    - Good use of try except!
+"""

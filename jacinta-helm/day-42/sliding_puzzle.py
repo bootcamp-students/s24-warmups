@@ -15,3 +15,8 @@ def is_solved(board):
 #iterate through 2darrat, nestes for loop
 #check next number to previous number, if next number is less than previous, return false
 #if make it through both without returning flase, return true
+
+"""
+    Ember's Feedback:
+    - good work!
+"""

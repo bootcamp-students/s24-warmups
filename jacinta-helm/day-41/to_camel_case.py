@@ -5,7 +5,10 @@ def to_camel_case(text):
     
     return result
 
-
+"""
+    Ember's Feedback:
+    - Good job
+"""
 
 #     # i'm replacing underscores and dashes with spaces
 #     text = text.replace("_", " ").replace("-", " ")
