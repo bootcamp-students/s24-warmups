@@ -1,6 +1,9 @@
 def kill_monsters(health, monsters, damage):
     hits = monsters // 3
     
+    if monsters % 3 == 0:
+        hits -= 1
+    
     total_damage = hits * damage
     
     remaining_health = health - total_damage
