@@ -7,3 +7,9 @@ def kill_monsters(health, monsters, damage):
         return "hero died"
     else:
         return f"hits: {final_hits}, damage: {final_damage}, health: {final_health}"
+
+"""
+    Ember's Feedback:
+    - good work!
+    - was a sql file
+"""
