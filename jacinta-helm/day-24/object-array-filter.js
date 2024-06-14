@@ -1,37 +1,19 @@
 function countGrade(scores){
-    console.log(scores);
-    let grades = [
-      {
-        letter: 'S',
-        score: 'x = 100'
-      },
-      {
-        letter: 'A',
-        score: '100 > x >= 90',
-      },
-      {
-        letter: 'B',
-        score: '90 > x >= 80',
-      },
-      {
-        letter: 'C',
-        score: '80 > x >= 60',
-      },
-      {
-        letter: 'D',
-        score: '60 > x >= 0',
-      },
-      {
-        letter: 'X',
-        score:'x = -1',
-      },
-    ]
-    console.log(grades)
-    
-    let filteredGrades = grades.filter(grade => {
-        let condition = grade.score.replace('x', score);
-        return eval(condition);
-    });
-    return filteredGrades.map(grade => grade.letter)
- 
-  }
+
+  const S = scores.filter(score => score === 100).length;
+  const A = scores.filter((score) => score < 100 && score >= 90).length;
+  const B = scores.filter((score) => score < 90 && score >= 80).length;
+  const C = scores.filter((score) => score < 80 && score >= 60).length;
+  const D = scores.filter((score) => score < 60 && score >= 0).length;
+  const X = scores.filter((score) => score === -1).length;
+
+  const grades = {
+      "S": S,
+      "A": A,
+      "B": B,
+      "C": C,
+      "D": D,
+      "X": X
+  };
+  return grades;
+}
