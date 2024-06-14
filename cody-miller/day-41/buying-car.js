@@ -31,3 +31,9 @@ function nbMonths(
 
   return [months, leftoverMoney];
 }
+
+/*
+  Ember's Feedback:
+  - Great job!
+  - This is good practice for tedious business logic in work tickets haha
+*/
