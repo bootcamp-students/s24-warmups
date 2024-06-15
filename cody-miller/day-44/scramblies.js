@@ -20,3 +20,9 @@ function scramble(str1, str2) {
 // Break apart str2
 // See if it is in str1
 // Else, return false
+
+/*
+  Ember's Feedback:
+  - Great work!
+  - Best solution
+*/
