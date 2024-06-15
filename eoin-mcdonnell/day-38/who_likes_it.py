@@ -8,6 +8,9 @@ def likes(names):
     elif (len(names) == 3):
         return f'{names[0]}, {names[1]} and {names[2]} like this'
     else: 
+<<<<<<< HEAD
+        return f'{names[0]}, {names[1]} and {len(names)-2} others like this'
+=======
         return f'{names[0]}, {names[1]} and {len(names)-2} others like this'
     
 """
@@ -55,3 +58,4 @@ def likes(names):
             return f"{a}, {b} and {c} like this"
         case [a, b, *rest]:
             return f"{a}, {b} and {len(rest)} others like this"
+>>>>>>> 4b178708d77906f208d5f903f6748cf4f7eb0eca
