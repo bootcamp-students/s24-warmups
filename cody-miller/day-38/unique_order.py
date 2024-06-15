@@ -4,3 +4,8 @@
 
 def unique_in_order(iterable):
     return [a for i, a in enumerate(iterable) if i == 0 or a != iterable[i-1]]
+
+"""
+    Ember's Feedback:
+    - nice work! good use of list comprehension!
+"""

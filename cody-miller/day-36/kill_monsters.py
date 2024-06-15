@@ -20,3 +20,8 @@ How much damage received
 Remaining Health
 When Health == 0, Hero Died
 '''
+
+"""
+    Ember's Feedback:
+    - Great work!! :D
+"""
