@@ -29,25 +29,36 @@ Things to remember while coding:
 -Return the number of months to buy the car, and the savings we have after purchasing
 */
 
-function nbMonths(startPriceOld, startPriceNew, savingperMonth, percentLossByMonth){
-    let months = 0;
-    let savings = 0;
+function nbMonths(
+  startPriceOld,
+  startPriceNew,
+  savingPerMonth,
+  percentLossByMonth
+) {
+  let months = 0;
+  let savings = 0;
 
-    // make a while loop 
-    while ((savings + startPriceOld) < startPriceNew) {
-        //update car prices
-        startPriceOld -= (startPriceOld * (percentLossByMonth/100))
-        startPriceNew -= (startPriceNew * (percentLossByMonth/100))
-        //same as +1, incrementing months
-        months ++;
+  // make a while loop
+  while (savings + startPriceOld < startPriceNew) {
+    //update car prices
+    startPriceOld -= startPriceOld * (percentLossByMonth / 100);
+    startPriceNew -= startPriceNew * (percentLossByMonth / 100);
+    //same as +1, incrementing months
+    months++;
 
-        // Increase the savings we have per month
-        savings += savingperMonth;
+    // Increase the savings we have per month
+    savings += savingPerMonth;
 
-        // Increase the percentage loss
-        months%2 === 1 ? percentLossByMonth+= .5 : null
-    }
-    // Calculate the remaining money after buying the new car
-    return [months, Math.round((startPriceOld+savings)-startPriceNew)]
-    
+    // Increase the percentage loss
+    months % 2 === 1 ? (percentLossByMonth += 0.5) : null;
   }
+  // Calculate the remaining money after buying the new car
+  return [months, Math.round(startPriceOld + savings - startPriceNew)];
+}
+
+/*
+    Ember's Feedback:
+    - good work!
+    - you could write line 53 as: months % 2 === 1 && (percentLossByMonth += 0.5)
+    - understanding this kind of convoluted logic ask is good practice for on the job LOL
+*/

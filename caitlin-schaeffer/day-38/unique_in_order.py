@@ -1,9 +1,9 @@
-# Instructions: Implement the function unique_in_order which takes as argument a sequence and returns a list of items without any elements 
+# Instructions: Implement the function unique_in_order which takes as argument a sequence and returns a list of items without any elements
 # with the same value next to each other and preserving the original order of elements.
-# Example: 
+# Example:
 # unique_in_order('AAAABBBCCDAABBB') == ['A', 'B', 'C', 'D', 'A', 'B']
 # Params: given string
-# Return: list 
+# Return: list
 # Concerns: do they mix numbers and letters?
 # Solution: you want to look at the element, and then go through the indexes of the elements and compare them one at a time, append the ones
 # that are not next to a matching character to the return list
@@ -11,7 +11,8 @@
 # def unique_in_order(sequence):
 #     return
 
-#actual working solution:
+
+# actual working solution:
 def unique_in_order(sequence):
     answer_list = []
     for i, item in enumerate(sequence):
@@ -20,14 +21,31 @@ def unique_in_order(sequence):
     return answer_list
 
 
-
-#working it out 
+# working it out
 # def unique_in_order(sequence):
 #     answer_array = []
 #     for seq in sequence:
 #         if seq != seq[0] - 1:
 #             return answer_array.append(seq)
 #         else:
-#             return sequence 
+#             return sequence
 #     return answer_array
 
+"""
+    Ember's Feedback:
+    - Great work :D
+"""
+
+
+# Alternative Solution
+def unique_in_order(sequence):
+    returnValue = []
+
+    for value in sequence:
+        if len(returnValue) == 0:
+            returnValue.append(value)
+
+        elif returnValue[-1] != value:
+            returnValue.append(value)
+
+    return returnValue
