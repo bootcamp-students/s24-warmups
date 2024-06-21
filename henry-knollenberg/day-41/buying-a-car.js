@@ -17,25 +17,37 @@
     return month  
 */
 
-function nbMonths(startPriceOld, startPriceNew, savingperMonth, percentLossByMonth){
-    let oldCar = startPriceOld
-    let newCar = startPriceNew
-    let savings = 0
-    let percentDecrease = percentLossByMonth / 100
-    let totalValue = oldCar + savings
-    let month = 0
-    let leftOver = 0
-    
-    while (totalValue < newCar) {
-      month++
-      if (month % 2 === 0) {
-        percentDecrease = percentDecrease + 0.005
-      }
-      oldCar = oldCar * (1 - percentDecrease)
-      newCar = newCar * (1 - percentDecrease)
-      savings = savings + savingperMonth
-      totalValue = oldCar + savings
+function nbMonths(
+  startPriceOld,
+  startPriceNew,
+  savingPerMonth,
+  percentLossByMonth
+) {
+  let oldCar = startPriceOld;
+  let newCar = startPriceNew;
+  let savings = 0;
+  let percentDecrease = percentLossByMonth / 100;
+  let totalValue = oldCar + savings;
+  let month = 0;
+  let leftOver = 0;
+
+  while (totalValue < newCar) {
+    month++;
+    if (month % 2 === 0) {
+      percentDecrease = percentDecrease + 0.005;
     }
-    leftOver = totalValue - newCar
-    return [month, Math.round(leftOver)]
+    oldCar = oldCar * (1 - percentDecrease);
+    newCar = newCar * (1 - percentDecrease);
+    savings = savings + savingPerMonth;
+    totalValue = oldCar + savings;
   }
+
+  leftOver = totalValue - newCar;
+  return [month, Math.round(leftOver)];
+}
+
+/*
+    Ember's Feedback:
+    - Good work :D
+    - This is good practice in deciphering convoluted work tickets lmao
+  */

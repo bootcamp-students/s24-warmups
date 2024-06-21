@@ -9,32 +9,51 @@ return true or false
 */
 
 function scramble(str1, str2) {
-    let arr2 = str2.split("")
-    let arr1 = str1.split("")
-    let obj = {}
-    
-    arr2.forEach((a) => {
-      if (obj[a]) {
-        obj[a]++
-      } else {
-        obj[a] = 1
-      }
-    })
-    
-    arr1.forEach((b) => {
-      if (obj[b]) {
-        obj[b]--
-      } else {
-        obj[b] = 0
-      }
-    })
-             
-    for (const c in obj) {
-      if (obj[c] > 0) {
-        return false
-      }
+  let arr2 = str2.split("");
+  let arr1 = str1.split("");
+  let obj = {};
+
+  arr2.forEach((a) => {
+    if (obj[a]) {
+      obj[a]++;
+    } else {
+      obj[a] = 1;
     }
-    
-    return true
-    
+  });
+
+  arr1.forEach((b) => {
+    if (obj[b]) {
+      obj[b]--;
+    } else {
+      obj[b] = 0;
+    }
+  });
+
+  for (const c in obj) {
+    if (obj[c] > 0) {
+      return false;
+    }
   }
+
+  return true;
+}
+
+/*
+  Ember's Feedback:
+  - Good work!
+*/
+
+// Alternative Solution
+function scramble(str1, str2) {
+  let count = {};
+
+  Array.prototype.forEach.call(str1, function (a) {
+    count[a] = (count[a] || 0) + 1;
+  });
+
+  return Array.prototype.every.call(str2, function (a) {
+    // because the decrement operator is placed in the back, it returns the current value to be used in the return
+    // BEFORE it decrements the value. This is necessary because zero is falsey and .every() coerces the returned value to be a boolean, for the sake of testing.
+    return count[a]--;
+  });
+}
