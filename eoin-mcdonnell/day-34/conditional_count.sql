@@ -12,6 +12,9 @@ SELECT
   SUM(amount) FILTER (WHERE staff_id = 2) AS jon_amount
 FROM payment
 GROUP BY month
+<<<<<<< HEAD
+ORDER BY month;
+=======
 ORDER BY month;
 
 /*
@@ -53,3 +56,4 @@ SELECT EXTRACT(
 FROM payment
 GROUP BY month
 ORDER BY month
+>>>>>>> 4b178708d77906f208d5f903f6748cf4f7eb0eca

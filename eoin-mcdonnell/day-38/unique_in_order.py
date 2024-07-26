@@ -5,6 +5,10 @@ def unique_in_order(sequence):
         if char != current_char:
             arr.append(char)
             current_char = char
+<<<<<<< HEAD
+            
+    return arr
+=======
 
     return arr
 
@@ -27,3 +31,4 @@ def unique_in_order(sequence):
             returnValue.append(value)
 
     return returnValue
+>>>>>>> 4b178708d77906f208d5f903f6748cf4f7eb0eca
