@@ -7,3 +7,8 @@ def break_chocolate(n, m):
 
 # if n is equal to 0 and m is equal to 0 return 0
 # then return n times m -1 
+
+"""
+    Ember's Feedback:
+    - Good job!
+"""
