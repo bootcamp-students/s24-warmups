@@ -7,16 +7,22 @@
 ##Explain - I need to sort items of the arrays and return if the values are the same in no particular order
 ##Positive Talk - You can do it
 
+
 def comp(array1, array2):
-   
+
     if array1 is None or array2 is None:
         return False
-    
+
     if len(array1) != len(array2):
         return False
-    
+
     array1_squared = [x * x for x in array1]
-    
-    
+
     return sorted(array1_squared) == sorted(array2)
-    
+
+
+"""
+    Ember's Feedback:
+    - Excellent job!!
+    - This is the ideal solution :D
+"""
