@@ -7,3 +7,8 @@ def to_camel_case(text):
     return result
 
 # embers solution
+
+"""
+    Ember's Feedback:
+    - Good work!
+"""
